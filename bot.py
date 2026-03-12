@@ -1,5 +1,5 @@
 """
-BTC Oracle - Main Signal Bot (V2 - Full Arsenal)
+BTC Oracle V3 - Full Arsenal + Deep Learning + News + Macro
 """
 
 import os
@@ -10,7 +10,9 @@ import anthropic
 import db
 from indicators import get_all_indicators, fetch_recent_ticks
 from market_data import get_all_market_data
+from news_sentiment import get_all_sentiment_data
 from pattern_analyzer import get_pattern_summary
+from deep_analysis import quick_trade_review, deep_strategy_analysis, get_strategy_doc
 
 load_dotenv()
 
@@ -30,7 +32,7 @@ def get_performance_stats():
     return data[0] if data else None
 
 
-def ask_claude_for_signal(indicators, market_data, pattern_summary, past_signals, journal_entries, performance):
+def ask_claude_for_signal(indicators, market_data, sentiment_data, pattern_summary, strategy_doc, past_signals, journal_entries, performance):
     past_text = ""
     if past_signals:
         for s in past_signals[:20]:
@@ -41,24 +43,33 @@ def ask_claude_for_signal(indicators, market_data, pattern_summary, past_signals
 
     journal_text = ""
     if journal_entries:
-        for j in journal_entries[:10]:
-            journal_text += f"  [{j['entry_type']}] {j['content']}\n"
+        for j in journal_entries[:15]:
+            journal_text += f"  [{j['entry_type']}] {j['content'][:150]}\n"
     else:
         journal_text = "  No journal entries yet.\n"
 
     perf_text = "No performance data yet."
     if performance:
-        perf_text = f"Win Rate: {performance.get('win_rate', 0):.1%} | Total: {performance.get('total_signals', 0)} | Wins: {performance.get('total_wins', 0)} | Losses: {performance.get('total_losses', 0)}"
+        perf_text = f"Win Rate: {performance.get('win_rate', 0):.1%} | Total: {performance.get('total_signals', 0)} | Wins: {performance.get('total_wins', 0)} | Losses: {performance.get('total_losses', 0)} | Streak: {performance.get('streak_current', 0)}"
 
-    # Build market data section
     market_text = ""
     for k, v in market_data.items():
         market_text += f"  {k}: {v}\n"
 
-    prompt = f"""You are BTC Oracle, an elite Bitcoin price prediction AI in LEARNING MODE.
-You have access to an extensive arsenal of market data. Use ALL of it.
+    sentiment_text = ""
+    for k, v in sentiment_data.items():
+        sentiment_text += f"  {k}: {v}\n"
 
-Predict whether BTC will be HIGHER or LOWER than its current price in exactly 15 minutes.
+    strategy_section = ""
+    if strategy_doc:
+        strategy_section = f"""
+=== YOUR STRATEGY DOCUMENT (follow these rules!) ===
+{strategy_doc}
+"""
+
+    prompt = f"""You are BTC Oracle V3, an elite Bitcoin prediction AI with a massive data arsenal.
+
+Predict whether BTC will be HIGHER or LOWER in exactly 15 minutes.
 
 === TECHNICAL INDICATORS ===
   Price: ${indicators['current_price']:,.2f}
@@ -66,53 +77,53 @@ Predict whether BTC will be HIGHER or LOWER than its current price in exactly 15
   Stochastic RSI: K={indicators.get('stoch_rsi_k', 'N/A')} D={indicators.get('stoch_rsi_d', 'N/A')}
   MACD: {indicators.get('macd', 'N/A')} (Signal: {indicators.get('macd_signal', 'N/A')}, Hist: {indicators.get('macd_histogram', 'N/A')})
   Bollinger: Lower={indicators.get('bollinger_lower', 'N/A')} | Mid={indicators.get('bollinger_middle', 'N/A')} | Upper={indicators.get('bollinger_upper', 'N/A')}
-  Bollinger Position: {indicators.get('bollinger_position', 'N/A')} (0=lower band, 1=upper band)
+  Bollinger Position: {indicators.get('bollinger_position', 'N/A')} (0=lower, 1=upper)
   EMA 9: {indicators.get('ema_9', 'N/A')} | EMA 21: {indicators.get('ema_21', 'N/A')} | SMA 50: {indicators.get('sma_50', 'N/A')}
   EMA Crossover: {indicators.get('ema_crossover', 'N/A')}
-  Momentum: {indicators.get('momentum', 'N/A')}
-  Rate of Change: {indicators.get('rate_of_change', 'N/A')}%
+  Momentum: {indicators.get('momentum', 'N/A')} | ROC: {indicators.get('rate_of_change', 'N/A')}%
   VWAP: {indicators.get('vwap', 'N/A')} | Price vs VWAP: {indicators.get('price_vs_vwap', 'N/A')}
-  ATR (volatility): {indicators.get('atr', 'N/A')}
-  OBV Trend: {indicators.get('obv_trend', 'N/A')}
-  Ticks Analyzed: {indicators.get('tick_count', 'N/A')}
+  ATR: {indicators.get('atr', 'N/A')} | OBV Trend: {indicators.get('obv_trend', 'N/A')}
 
-=== MARKET SENTIMENT & EXTERNAL DATA ===
+=== ORDER FLOW & MARKET MICROSTRUCTURE ===
 {market_text}
 
-=== YOUR PATTERN ANALYSIS (your own win/loss stats) ===
-{pattern_summary}
+=== NEWS, SENTIMENT & MACRO ===
+{sentiment_text}
 
+=== YOUR PATTERN ANALYSIS (win/loss stats by condition) ===
+{pattern_summary}
+{strategy_section}
 === PAST SIGNALS ===
 {past_text}
 
-=== PERFORMANCE === 
+=== PERFORMANCE ===
 {perf_text}
 
-=== JOURNAL ===
+=== TRADE REVIEWS & JOURNAL ===
 {journal_text}
 
-=== DECISION FRAMEWORK ===
-Weight these factors in order of importance for 15-minute predictions:
-1. Order book imbalance & trade flow (most immediate signal)
-2. Multi-timeframe momentum alignment
-3. Candlestick patterns & volatility regime
-4. Technical indicators (RSI, MACD, Bollinger position, StochRSI)
-5. Your own pattern analysis (which conditions you win/lose in)
-6. Market sentiment (Fear & Greed, BTC dominance trends)
+=== DECISION FRAMEWORK (priority order) ===
+1. FOLLOW YOUR STRATEGY DOCUMENT if one exists - it's based on your actual data
+2. Order book imbalance + trade flow (most immediate signal)
+3. News sentiment - any breaking news overrides technicals
+4. Multi-timeframe momentum alignment
+5. Liquidation pressure and volatility regime
+6. Candlestick patterns + Bollinger position
+7. Technical confluence (RSI + MACD + StochRSI + OBV + EMA crossover)
+8. Market session context (Asia/Europe/US)
+9. Macro correlations (gold, dollar strength)
+10. Your pattern stats - avoid conditions where you historically lose
 
-Key principles:
-- If order flow and momentum ALIGN, follow them with high confidence
-- If they CONFLICT, lower your confidence and lean toward mean reversion
-- Check your pattern stats: if you historically lose in these conditions, consider the opposite
-- Volatility regime matters: in LOW volatility, price tends to continue; in HIGH, reversals are more likely
-- OBV trend confirms or denies price moves
+CRITICAL RULES:
+- If 3+ major signals CONFLICT, lower confidence below 60%
+- If order flow, momentum, AND news all ALIGN, confidence should be 80%+
+- Check your strategy doc for specific rules you've developed
+- After a loss streak of 3+, consider the OPPOSITE of your instinct
+- Liquidation cascades create momentum - ride them, don't fade them
 
-RULES:
-- LEARNING MODE: Always output UP or DOWN. No WAIT.
-- Be brutally honest in your reasoning about conflicting signals
-- Reference your pattern analysis when relevant
+LEARNING MODE: Always output UP or DOWN. No WAIT.
 
-Respond in this exact JSON format only:
+Respond ONLY in this JSON format:
 {{"signal": "UP" or "DOWN", "confidence": 0.0 to 1.0, "reasoning": "Your detailed analysis"}}"""
 
     try:
@@ -168,6 +179,7 @@ def check_previous_signals():
         return
     current_price = float(recent["price"].iloc[-1])
 
+    resolved_any = False
     for signal in signals:
         price_at = signal["btc_price_at_signal"]
         if not price_at:
@@ -182,6 +194,12 @@ def check_previous_signals():
         })
         change = current_price - price_at
         print(f"  Signal #{signal['id']}: {signal['signal']} -> {'UP' if went_up else 'DOWN'} (${change:+,.2f}) = {outcome}")
+        resolved_any = True
+
+    # Quick review after resolving trades
+    if resolved_any:
+        print("\n  Running quick trade review...")
+        quick_trade_review()
 
 
 def update_performance():
@@ -210,86 +228,51 @@ def update_performance():
     print(f"  Performance: {win_rate:.1%} ({wins}W/{losses}L) | Streak: {streak}")
 
 
-def write_journal_entry(performance):
-    if not performance or performance.get("total_signals", 0) < 5:
-        return
-    if performance["total_signals"] % 5 != 0:  # Journal every 5 signals now
-        return
-
-    past = get_past_signals(20)
-    recent_outcomes = [s.get("outcome") for s in past if s.get("outcome")]
-    recent_wr = recent_outcomes.count("WIN") / len(recent_outcomes) if recent_outcomes else 0
-    pattern_summary = get_pattern_summary()
-
-    prompt = f"""You are BTC Oracle reviewing performance.
-
-Win rate: {recent_wr:.1%} | Total: {performance['total_signals']}
-
-Pattern Analysis:
-{pattern_summary}
-
-Recent signals:
-"""
-    for s in past[:10]:
-        prompt += f"  {s.get('signal')} @ ${s.get('btc_price_at_signal', 0):,.2f} -> {s.get('outcome', '?')} | RSI: {s.get('rsi')} | MACD: {s.get('macd')}\n"
-
-    prompt += """
-Write a 2-3 sentence journal entry analyzing patterns. Focus on ACTIONABLE insights.
-JSON: {"entry_type": "REFLECTION" or "PATTERN" or "MISTAKE" or "INSIGHT", "content": "entry"}"""
-
-    try:
-        resp = claude.messages.create(model="claude-sonnet-4-20250514", max_tokens=300, messages=[{"role": "user", "content": prompt}])
-        text = resp.content[0].text.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1].rsplit("```", 1)[0]
-        entry = json.loads(text)
-        db.insert("journal", {
-            "entry_type": entry.get("entry_type", "REFLECTION"),
-            "content": entry.get("content", ""),
-            "win_rate_at_time": performance.get("win_rate", 0),
-            "total_signals_at_time": performance.get("total_signals", 0)
-        })
-        print(f"  Journal: [{entry['entry_type']}] {entry['content'][:80]}...")
-    except Exception as e:
-        print(f"Error writing journal: {e}")
-
-
 def run_signal_cycle():
     print("\n" + "=" * 60)
-    print(f"BTC ORACLE V2 | {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"BTC ORACLE V3 | {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print("=" * 60)
 
-    print("\n[1/6] Checking previous signals...")
+    print("\n[1/8] Checking previous signals + quick review...")
     check_previous_signals()
 
-    print("\n[2/6] Updating performance...")
+    print("\n[2/8] Updating performance...")
     update_performance()
 
-    print("\n[3/6] Calculating technical indicators...")
+    print("\n[3/8] Deep strategy analysis check...")
+    deep_strategy_analysis()
+
+    print("\n[4/8] Calculating technical indicators...")
     indicators = get_all_indicators()
     if not indicators:
         print("  Not enough data. Run collector.py first.")
         return
 
-    print("\n[4/6] Fetching market data...")
+    print("\n[5/8] Fetching market microstructure data...")
     market_data = get_all_market_data()
 
-    print("\n[5/6] Analyzing patterns...")
-    pattern_summary = get_pattern_summary()
-    print(f"  {pattern_summary[:100]}...")
+    print("\n[6/8] Fetching news & sentiment...")
+    sentiment_data = get_all_sentiment_data()
 
-    print("\n[6/6] Consulting Claude with full arsenal...")
+    print("\n[7/8] Analyzing patterns + loading strategy...")
+    pattern_summary = get_pattern_summary()
+    strategy_doc = get_strategy_doc()
+    if strategy_doc:
+        print(f"  Strategy doc loaded ({len(strategy_doc)} chars)")
+    else:
+        print("  No strategy doc yet (builds after 20 trades)")
+
+    print("\n[8/8] Consulting Claude V3 with FULL ARSENAL...")
     signal_data = ask_claude_for_signal(
-        indicators, market_data, pattern_summary,
-        get_past_signals(20), get_journal_entries(10), get_performance_stats()
+        indicators, market_data, sentiment_data, pattern_summary, strategy_doc,
+        get_past_signals(20), get_journal_entries(15), get_performance_stats()
     )
 
     print(f"\n  >>> SIGNAL: {signal_data['signal']} ({signal_data['confidence']:.0%})")
-    print(f"  >>> {signal_data.get('reasoning', '')[:150]}...")
+    print(f"  >>> {signal_data.get('reasoning', '')[:200]}...")
 
     print("\n  Logging signal...")
     log_signal(signal_data, indicators)
-    write_journal_entry(get_performance_stats())
 
     print("\nCycle complete.")
 
