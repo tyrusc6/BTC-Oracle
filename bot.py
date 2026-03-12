@@ -97,6 +97,9 @@ The scoring model gives a numerical recommendation. You can AGREE or OVERRIDE it
   BB Position: {indicators.get('bollinger_position', 'N/A')} | EMA Cross: {indicators.get('ema_crossover', 'N/A')}
   Momentum: {indicators.get('momentum', 'N/A')} | ROC: {indicators.get('rate_of_change', 'N/A')}%
   VWAP: {indicators.get('price_vs_vwap', 'N/A')} | OBV: {indicators.get('obv_trend', 'N/A')} | ATR: {indicators.get('atr', 'N/A')}
+  TREND 1-MIN: {indicators.get('trend_1m', 'N/A')} | TREND 5-MIN: {indicators.get('trend_5m', 'N/A')} | Trend Change: {indicators.get('trend_pct_change', 'N/A')}%
+
+CRITICAL RULE: DO NOT fight the trend. If both 1-min and 5-min trends point the same direction, your signal MUST match unless you have overwhelming contrary evidence.
 
 === ORDER BOOK & TRADE FLOW ===
 {market_text}
@@ -141,7 +144,14 @@ JSON only:
         return json.loads(text)
     except Exception as e:
         print(f"Error calling Claude: {e}")
-        return {"signal": "DOWN", "confidence": 0.5, "reasoning": f"Error: {e}"}
+        # Fallback to scoring model direction instead of hardcoded DOWN
+        fallback_dir = "DOWN"
+        try:
+            from scoring_model import score_signal as fallback_score
+            _, _, fallback_dir = fallback_score(indicators)
+        except:
+            pass
+        return {"signal": fallback_dir, "confidence": 0.5, "reasoning": f"Error, using scoring model fallback: {e}"}
 
 
 def log_signal(signal_data, indicators):
