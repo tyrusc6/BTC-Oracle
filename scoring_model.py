@@ -101,6 +101,27 @@ def score_signal(indicators, market_data=None):
 
     price = indicators.get("current_price", 0)
 
+    # TREND - highest weight signal (don't fight the trend!)
+    trend_1m = indicators.get("trend_1m")
+    trend_5m = indicators.get("trend_5m")
+    if trend_1m == "STRONG_UPTREND":
+        votes.append((+1, 1.5))
+    elif trend_1m == "UPTREND":
+        votes.append((+1, 1.0))
+    elif trend_1m == "STRONG_DOWNTREND":
+        votes.append((-1, 1.5))
+    elif trend_1m == "DOWNTREND":
+        votes.append((-1, 1.0))
+
+    if trend_5m == "STRONG_UPTREND":
+        votes.append((+1, 1.8))  # 5-min trend gets even more weight
+    elif trend_5m == "UPTREND":
+        votes.append((+1, 1.2))
+    elif trend_5m == "STRONG_DOWNTREND":
+        votes.append((-1, 1.8))
+    elif trend_5m == "DOWNTREND":
+        votes.append((-1, 1.2))
+
     # RSI signal
     rsi = indicators.get("rsi")
     if rsi is not None:
