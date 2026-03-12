@@ -1,0 +1,5008 @@
+{
+  "total_signals": 500,
+  "wins": 232,
+  "losses": 268,
+  "win_rate": 46.4,
+  "results": [
+    {
+      "timestamp": "2026-03-04 22:00:00+00:00",
+      "price": 73282.2,
+      "next_price": 73335.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 53.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 22:15:00+00:00",
+      "price": 73335.5,
+      "next_price": 72936.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -398.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 22:30:00+00:00",
+      "price": 72936.7,
+      "next_price": 72712.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -224.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 22:45:00+00:00",
+      "price": 72712.1,
+      "next_price": 72731.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 19.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 23:00:00+00:00",
+      "price": 72731.2,
+      "next_price": 72557.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -173.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 23:15:00+00:00",
+      "price": 72557.9,
+      "next_price": 72769.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 211.70000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 23:30:00+00:00",
+      "price": 72769.6,
+      "next_price": 72684.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -84.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-04 23:45:00+00:00",
+      "price": 72684.8,
+      "next_price": 72722.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 37.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 00:00:00+00:00",
+      "price": 72722.0,
+      "next_price": 72867.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 145.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 00:15:00+00:00",
+      "price": 72867.2,
+      "next_price": 72916.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 49.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 00:30:00+00:00",
+      "price": 72916.6,
+      "next_price": 72789.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -126.70000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 00:45:00+00:00",
+      "price": 72789.9,
+      "next_price": 73157.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 367.70000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 01:00:00+00:00",
+      "price": 73157.6,
+      "next_price": 72947.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -210.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 01:15:00+00:00",
+      "price": 72947.6,
+      "next_price": 72643.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -304.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 01:30:00+00:00",
+      "price": 72643.2,
+      "next_price": 72531.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -111.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 01:45:00+00:00",
+      "price": 72531.5,
+      "next_price": 72827.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 296.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 02:00:00+00:00",
+      "price": 72827.6,
+      "next_price": 72732.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -94.70000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 02:15:00+00:00",
+      "price": 72732.9,
+      "next_price": 72372.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -360.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 02:30:00+00:00",
+      "price": 72372.1,
+      "next_price": 72521.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 149.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 02:45:00+00:00",
+      "price": 72521.1,
+      "next_price": 72640.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 118.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 03:00:00+00:00",
+      "price": 72640.0,
+      "next_price": 72527.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -112.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 03:15:00+00:00",
+      "price": 72527.2,
+      "next_price": 72383.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -144.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 03:30:00+00:00",
+      "price": 72383.1,
+      "next_price": 72510.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 126.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 03:45:00+00:00",
+      "price": 72510.0,
+      "next_price": 72670.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 160.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 04:00:00+00:00",
+      "price": 72670.9,
+      "next_price": 72812.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 141.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 04:15:00+00:00",
+      "price": 72812.8,
+      "next_price": 72969.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 156.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 04:30:00+00:00",
+      "price": 72969.5,
+      "next_price": 72827.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -142.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 04:45:00+00:00",
+      "price": 72827.5,
+      "next_price": 72831.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 3.6000000000058208,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 05:00:00+00:00",
+      "price": 72831.1,
+      "next_price": 72515.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -315.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 05:15:00+00:00",
+      "price": 72515.9,
+      "next_price": 72434.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -81.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 05:30:00+00:00",
+      "price": 72434.2,
+      "next_price": 72417.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -16.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 05:45:00+00:00",
+      "price": 72417.5,
+      "next_price": 72169.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -247.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 06:00:00+00:00",
+      "price": 72169.7,
+      "next_price": 72402.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 232.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 06:15:00+00:00",
+      "price": 72402.6,
+      "next_price": 72445.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 43.29999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 06:30:00+00:00",
+      "price": 72445.9,
+      "next_price": 72562.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 117.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 06:45:00+00:00",
+      "price": 72562.9,
+      "next_price": 72655.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 92.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 07:00:00+00:00",
+      "price": 72655.2,
+      "next_price": 72545.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -109.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 07:15:00+00:00",
+      "price": 72545.7,
+      "next_price": 72203.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -342.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 07:30:00+00:00",
+      "price": 72203.1,
+      "next_price": 72067.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -135.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 07:45:00+00:00",
+      "price": 72067.6,
+      "next_price": 71854.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -212.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 08:00:00+00:00",
+      "price": 71854.8,
+      "next_price": 71862.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 7.599999999991269,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 08:15:00+00:00",
+      "price": 71862.4,
+      "next_price": 72215.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 353.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 08:30:00+00:00",
+      "price": 72215.5,
+      "next_price": 72362.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 146.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 08:45:00+00:00",
+      "price": 72362.3,
+      "next_price": 72645.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 283.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 09:00:00+00:00",
+      "price": 72645.4,
+      "next_price": 72704.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 58.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 09:15:00+00:00",
+      "price": 72704.0,
+      "next_price": 72561.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -142.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 09:30:00+00:00",
+      "price": 72561.9,
+      "next_price": 72612.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 50.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 09:45:00+00:00",
+      "price": 72612.2,
+      "next_price": 72748.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 136.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 10:00:00+00:00",
+      "price": 72748.8,
+      "next_price": 73186.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 437.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 10:15:00+00:00",
+      "price": 73186.3,
+      "next_price": 73341.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 155.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 10:30:00+00:00",
+      "price": 73341.6,
+      "next_price": 73416.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 75.29999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 10:45:00+00:00",
+      "price": 73416.9,
+      "next_price": 73225.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -191.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 11:00:00+00:00",
+      "price": 73225.4,
+      "next_price": 73144.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -80.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 11:15:00+00:00",
+      "price": 73144.9,
+      "next_price": 72862.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -282.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 11:30:00+00:00",
+      "price": 72862.7,
+      "next_price": 72925.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 62.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 11:45:00+00:00",
+      "price": 72925.2,
+      "next_price": 72972.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 46.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 12:00:00+00:00",
+      "price": 72972.0,
+      "next_price": 72818.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -153.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 12:15:00+00:00",
+      "price": 72818.7,
+      "next_price": 72918.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 99.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 12:30:00+00:00",
+      "price": 72918.3,
+      "next_price": 72917.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -1.3000000000029104,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 12:45:00+00:00",
+      "price": 72917.0,
+      "next_price": 72685.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -231.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 13:00:00+00:00",
+      "price": 72685.6,
+      "next_price": 72540.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -144.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 13:15:00+00:00",
+      "price": 72540.8,
+      "next_price": 72517.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -23.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 13:30:00+00:00",
+      "price": 72517.4,
+      "next_price": 72467.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -49.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 13:45:00+00:00",
+      "price": 72467.6,
+      "next_price": 72630.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 162.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 14:00:00+00:00",
+      "price": 72630.1,
+      "next_price": 72575.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -54.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 14:15:00+00:00",
+      "price": 72575.2,
+      "next_price": 72005.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -569.3999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 14:30:00+00:00",
+      "price": 72005.8,
+      "next_price": 72619.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 613.8999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 14:45:00+00:00",
+      "price": 72619.7,
+      "next_price": 71824.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -795.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 15:00:00+00:00",
+      "price": 71824.0,
+      "next_price": 71292.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -531.8999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 15:15:00+00:00",
+      "price": 71292.1,
+      "next_price": 71471.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 179.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 15:30:00+00:00",
+      "price": 71471.6,
+      "next_price": 71647.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 175.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 15:45:00+00:00",
+      "price": 71647.3,
+      "next_price": 71015.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -632.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 16:00:00+00:00",
+      "price": 71015.3,
+      "next_price": 71001.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -14.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 16:15:00+00:00",
+      "price": 71001.0,
+      "next_price": 71375.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 374.8999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 16:30:00+00:00",
+      "price": 71375.9,
+      "next_price": 71322.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -53.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 16:45:00+00:00",
+      "price": 71322.5,
+      "next_price": 71195.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -126.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 17:00:00+00:00",
+      "price": 71195.6,
+      "next_price": 70968.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -227.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 17:15:00+00:00",
+      "price": 70968.3,
+      "next_price": 70873.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -95.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 17:30:00+00:00",
+      "price": 70873.0,
+      "next_price": 70704.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -168.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 17:45:00+00:00",
+      "price": 70704.9,
+      "next_price": 71027.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 322.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 18:00:00+00:00",
+      "price": 71027.0,
+      "next_price": 70820.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -206.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 18:15:00+00:00",
+      "price": 70820.3,
+      "next_price": 70950.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 130.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 18:30:00+00:00",
+      "price": 70950.6,
+      "next_price": 70989.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 38.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 18:45:00+00:00",
+      "price": 70989.4,
+      "next_price": 71382.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 393.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 19:00:00+00:00",
+      "price": 71382.8,
+      "next_price": 71109.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -273.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 19:15:00+00:00",
+      "price": 71109.6,
+      "next_price": 71030.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -79.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 19:30:00+00:00",
+      "price": 71030.5,
+      "next_price": 70960.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -69.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 19:45:00+00:00",
+      "price": 70960.9,
+      "next_price": 71095.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 134.70000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 20:00:00+00:00",
+      "price": 71095.6,
+      "next_price": 71186.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 91.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 20:15:00+00:00",
+      "price": 71186.7,
+      "next_price": 71139.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -47.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 20:30:00+00:00",
+      "price": 71139.0,
+      "next_price": 71248.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 109.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 20:45:00+00:00",
+      "price": 71248.6,
+      "next_price": 71311.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 63.29999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 21:00:00+00:00",
+      "price": 71311.9,
+      "next_price": 71531.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 219.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 21:15:00+00:00",
+      "price": 71531.3,
+      "next_price": 71204.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -327.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 21:30:00+00:00",
+      "price": 71204.2,
+      "next_price": 71142.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -61.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 21:45:00+00:00",
+      "price": 71142.5,
+      "next_price": 71180.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 38.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 22:00:00+00:00",
+      "price": 71180.7,
+      "next_price": 71154.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -26.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 22:15:00+00:00",
+      "price": 71154.1,
+      "next_price": 71253.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 99.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 22:30:00+00:00",
+      "price": 71253.1,
+      "next_price": 71241.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -11.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 22:45:00+00:00",
+      "price": 71241.5,
+      "next_price": 71211.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -30.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 23:00:00+00:00",
+      "price": 71211.5,
+      "next_price": 71217.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 5.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 23:15:00+00:00",
+      "price": 71217.0,
+      "next_price": 70938.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -278.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 23:30:00+00:00",
+      "price": 70938.3,
+      "next_price": 70877.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -60.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-05 23:45:00+00:00",
+      "price": 70877.4,
+      "next_price": 71028.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 151.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 00:00:00+00:00",
+      "price": 71028.7,
+      "next_price": 70904.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -123.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 00:15:00+00:00",
+      "price": 70904.8,
+      "next_price": 70909.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 4.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 00:30:00+00:00",
+      "price": 70909.6,
+      "next_price": 70954.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 45.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 00:45:00+00:00",
+      "price": 70954.8,
+      "next_price": 70800.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -154.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 01:00:00+00:00",
+      "price": 70800.1,
+      "next_price": 70452.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -348.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 01:15:00+00:00",
+      "price": 70452.1,
+      "next_price": 71159.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 707.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 01:30:00+00:00",
+      "price": 71159.8,
+      "next_price": 71254.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 95.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 01:45:00+00:00",
+      "price": 71254.8,
+      "next_price": 71336.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 81.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 02:00:00+00:00",
+      "price": 71336.2,
+      "next_price": 71341.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 5.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 02:15:00+00:00",
+      "price": 71341.7,
+      "next_price": 71336.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -5.399999999994179,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 02:30:00+00:00",
+      "price": 71336.3,
+      "next_price": 71226.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -109.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 02:45:00+00:00",
+      "price": 71226.9,
+      "next_price": 71066.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -160.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 03:00:00+00:00",
+      "price": 71066.3,
+      "next_price": 71167.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 101.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 03:15:00+00:00",
+      "price": 71167.3,
+      "next_price": 71112.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -54.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 03:30:00+00:00",
+      "price": 71112.5,
+      "next_price": 71099.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -12.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 03:45:00+00:00",
+      "price": 71099.6,
+      "next_price": 70915.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -184.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 04:00:00+00:00",
+      "price": 70915.2,
+      "next_price": 70874.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -40.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 04:15:00+00:00",
+      "price": 70874.4,
+      "next_price": 70530.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -344.3999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 04:30:00+00:00",
+      "price": 70530.0,
+      "next_price": 70615.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 85.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 04:45:00+00:00",
+      "price": 70615.1,
+      "next_price": 70537.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -78.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 05:00:00+00:00",
+      "price": 70537.1,
+      "next_price": 70407.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -129.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 05:15:00+00:00",
+      "price": 70407.8,
+      "next_price": 70215.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -191.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 05:30:00+00:00",
+      "price": 70215.9,
+      "next_price": 70433.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 217.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 05:45:00+00:00",
+      "price": 70433.7,
+      "next_price": 70311.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -122.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 06:00:00+00:00",
+      "price": 70311.4,
+      "next_price": 70431.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 120.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 06:15:00+00:00",
+      "price": 70431.5,
+      "next_price": 70663.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 231.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 06:30:00+00:00",
+      "price": 70663.4,
+      "next_price": 70604.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -59.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 06:45:00+00:00",
+      "price": 70604.4,
+      "next_price": 70576.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -28.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 07:00:00+00:00",
+      "price": 70576.4,
+      "next_price": 70872.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 295.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 07:15:00+00:00",
+      "price": 70872.3,
+      "next_price": 71058.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 186.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 07:30:00+00:00",
+      "price": 71058.9,
+      "next_price": 71081.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 23.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 07:45:00+00:00",
+      "price": 71081.9,
+      "next_price": 70960.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -121.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 08:00:00+00:00",
+      "price": 70960.9,
+      "next_price": 70943.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -17.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 08:15:00+00:00",
+      "price": 70943.3,
+      "next_price": 70933.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -9.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 08:30:00+00:00",
+      "price": 70933.6,
+      "next_price": 70773.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -159.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 08:45:00+00:00",
+      "price": 70773.7,
+      "next_price": 70567.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -206.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 09:00:00+00:00",
+      "price": 70567.7,
+      "next_price": 70419.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -148.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 09:15:00+00:00",
+      "price": 70419.7,
+      "next_price": 70549.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 129.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 09:30:00+00:00",
+      "price": 70549.5,
+      "next_price": 70570.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 21.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 09:45:00+00:00",
+      "price": 70570.9,
+      "next_price": 70652.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 81.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 10:00:00+00:00",
+      "price": 70652.4,
+      "next_price": 70767.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 114.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 10:15:00+00:00",
+      "price": 70767.0,
+      "next_price": 70541.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -226.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 10:30:00+00:00",
+      "price": 70541.0,
+      "next_price": 70538.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -2.3000000000029104,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 10:45:00+00:00",
+      "price": 70538.7,
+      "next_price": 70551.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 13.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 11:00:00+00:00",
+      "price": 70551.7,
+      "next_price": 70570.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 18.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 11:15:00+00:00",
+      "price": 70570.4,
+      "next_price": 70411.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -158.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 11:30:00+00:00",
+      "price": 70411.7,
+      "next_price": 70229.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -182.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 11:45:00+00:00",
+      "price": 70229.0,
+      "next_price": 69932.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -297.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 12:00:00+00:00",
+      "price": 69932.0,
+      "next_price": 70032.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 100.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 12:15:00+00:00",
+      "price": 70032.2,
+      "next_price": 69765.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -266.3999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 12:30:00+00:00",
+      "price": 69765.8,
+      "next_price": 69939.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 173.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 12:45:00+00:00",
+      "price": 69939.0,
+      "next_price": 70022.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 83.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 13:00:00+00:00",
+      "price": 70022.1,
+      "next_price": 70093.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 71.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 13:15:00+00:00",
+      "price": 70093.8,
+      "next_price": 70078.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -15.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 13:30:00+00:00",
+      "price": 70078.5,
+      "next_price": 69228.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -850.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 13:45:00+00:00",
+      "price": 69228.2,
+      "next_price": 68843.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -384.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 14:00:00+00:00",
+      "price": 68843.7,
+      "next_price": 69000.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 156.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 14:15:00+00:00",
+      "price": 69000.1,
+      "next_price": 68740.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -259.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 14:30:00+00:00",
+      "price": 68740.3,
+      "next_price": 68409.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -330.6000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 14:45:00+00:00",
+      "price": 68409.7,
+      "next_price": 68612.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 202.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 15:00:00+00:00",
+      "price": 68612.1,
+      "next_price": 68867.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 254.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 15:15:00+00:00",
+      "price": 68867.0,
+      "next_price": 68767.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -99.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 15:30:00+00:00",
+      "price": 68767.5,
+      "next_price": 68522.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -245.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 15:45:00+00:00",
+      "price": 68522.3,
+      "next_price": 68357.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -165.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 16:00:00+00:00",
+      "price": 68357.1,
+      "next_price": 68550.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 193.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 16:15:00+00:00",
+      "price": 68550.7,
+      "next_price": 68580.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 30.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 16:30:00+00:00",
+      "price": 68580.8,
+      "next_price": 68449.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -131.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 16:45:00+00:00",
+      "price": 68449.5,
+      "next_price": 68417.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -32.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 17:00:00+00:00",
+      "price": 68417.0,
+      "next_price": 68254.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -162.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 17:15:00+00:00",
+      "price": 68254.6,
+      "next_price": 67826.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -428.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 17:30:00+00:00",
+      "price": 67826.6,
+      "next_price": 67964.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 137.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 17:45:00+00:00",
+      "price": 67964.3,
+      "next_price": 68341.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 377.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 18:00:00+00:00",
+      "price": 68341.9,
+      "next_price": 68280.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -61.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 18:15:00+00:00",
+      "price": 68280.3,
+      "next_price": 68437.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 157.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 18:30:00+00:00",
+      "price": 68437.5,
+      "next_price": 68177.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -260.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 18:45:00+00:00",
+      "price": 68177.2,
+      "next_price": 68427.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 249.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 19:00:00+00:00",
+      "price": 68427.1,
+      "next_price": 68190.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -236.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 19:15:00+00:00",
+      "price": 68190.5,
+      "next_price": 68162.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -28.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 19:30:00+00:00",
+      "price": 68162.1,
+      "next_price": 68123.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -38.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 19:45:00+00:00",
+      "price": 68123.7,
+      "next_price": 68018.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -105.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 20:00:00+00:00",
+      "price": 68018.3,
+      "next_price": 67817.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -201.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 20:15:00+00:00",
+      "price": 67817.1,
+      "next_price": 67981.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 164.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 20:30:00+00:00",
+      "price": 67981.7,
+      "next_price": 68117.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 135.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 20:45:00+00:00",
+      "price": 68117.1,
+      "next_price": 68147.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 30.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 21:00:00+00:00",
+      "price": 68147.6,
+      "next_price": 68015.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -132.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 21:15:00+00:00",
+      "price": 68015.3,
+      "next_price": 68230.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 215.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 21:30:00+00:00",
+      "price": 68230.4,
+      "next_price": 68290.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 59.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 21:45:00+00:00",
+      "price": 68290.0,
+      "next_price": 68311.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 21.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 22:00:00+00:00",
+      "price": 68311.5,
+      "next_price": 68292.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -19.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 22:15:00+00:00",
+      "price": 68292.1,
+      "next_price": 68369.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 77.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 22:30:00+00:00",
+      "price": 68369.1,
+      "next_price": 68308.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -60.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 22:45:00+00:00",
+      "price": 68308.3,
+      "next_price": 68326.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 18.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 23:00:00+00:00",
+      "price": 68326.9,
+      "next_price": 68317.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -9.799999999988358,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 23:15:00+00:00",
+      "price": 68317.1,
+      "next_price": 68222.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -94.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 23:30:00+00:00",
+      "price": 68222.9,
+      "next_price": 68128.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -94.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-06 23:45:00+00:00",
+      "price": 68128.0,
+      "next_price": 68209.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 81.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 00:00:00+00:00",
+      "price": 68209.5,
+      "next_price": 68210.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 0.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 00:15:00+00:00",
+      "price": 68210.0,
+      "next_price": 68297.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 87.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 00:30:00+00:00",
+      "price": 68297.1,
+      "next_price": 68300.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 3.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 00:45:00+00:00",
+      "price": 68300.1,
+      "next_price": 68235.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -64.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 01:00:00+00:00",
+      "price": 68235.3,
+      "next_price": 68223.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -11.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 01:15:00+00:00",
+      "price": 68223.6,
+      "next_price": 68255.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 31.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 01:30:00+00:00",
+      "price": 68255.0,
+      "next_price": 68271.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 16.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 01:45:00+00:00",
+      "price": 68271.4,
+      "next_price": 68252.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -19.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 02:00:00+00:00",
+      "price": 68252.0,
+      "next_price": 68106.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -145.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 02:15:00+00:00",
+      "price": 68106.7,
+      "next_price": 68175.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 69.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 02:30:00+00:00",
+      "price": 68175.9,
+      "next_price": 68352.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 176.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 02:45:00+00:00",
+      "price": 68352.1,
+      "next_price": 68514.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 162.29999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 03:00:00+00:00",
+      "price": 68514.4,
+      "next_price": 68222.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -291.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 03:15:00+00:00",
+      "price": 68222.9,
+      "next_price": 68191.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -31.29999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 03:30:00+00:00",
+      "price": 68191.6,
+      "next_price": 68112.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -78.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 03:45:00+00:00",
+      "price": 68112.7,
+      "next_price": 67947.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -164.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 04:00:00+00:00",
+      "price": 67947.9,
+      "next_price": 68035.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 87.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 04:15:00+00:00",
+      "price": 68035.1,
+      "next_price": 68137.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 102.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 04:30:00+00:00",
+      "price": 68137.3,
+      "next_price": 68072.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -65.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 04:45:00+00:00",
+      "price": 68072.1,
+      "next_price": 67997.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -75.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 05:00:00+00:00",
+      "price": 67997.0,
+      "next_price": 68012.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 15.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 05:15:00+00:00",
+      "price": 68012.0,
+      "next_price": 68083.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 71.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 05:30:00+00:00",
+      "price": 68083.7,
+      "next_price": 67997.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -86.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 05:45:00+00:00",
+      "price": 67997.1,
+      "next_price": 67960.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -36.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 06:00:00+00:00",
+      "price": 67960.9,
+      "next_price": 67862.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -98.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 06:15:00+00:00",
+      "price": 67862.1,
+      "next_price": 67924.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 61.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 06:30:00+00:00",
+      "price": 67924.0,
+      "next_price": 67691.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -232.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 06:45:00+00:00",
+      "price": 67691.9,
+      "next_price": 67635.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -56.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 07:00:00+00:00",
+      "price": 67635.0,
+      "next_price": 67727.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 92.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 07:15:00+00:00",
+      "price": 67727.0,
+      "next_price": 67778.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 51.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 07:30:00+00:00",
+      "price": 67778.6,
+      "next_price": 67854.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 76.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 07:45:00+00:00",
+      "price": 67854.8,
+      "next_price": 67847.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -7.400000000008731,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 08:00:00+00:00",
+      "price": 67847.4,
+      "next_price": 67975.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 128.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 08:15:00+00:00",
+      "price": 67975.4,
+      "next_price": 67914.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -61.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 08:30:00+00:00",
+      "price": 67914.3,
+      "next_price": 67802.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -112.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 08:45:00+00:00",
+      "price": 67802.0,
+      "next_price": 67950.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 148.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 09:00:00+00:00",
+      "price": 67950.6,
+      "next_price": 67950.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -0.6000000000058208,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 09:15:00+00:00",
+      "price": 67950.0,
+      "next_price": 67962.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 12.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 09:30:00+00:00",
+      "price": 67962.5,
+      "next_price": 68008.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 45.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 09:45:00+00:00",
+      "price": 68008.3,
+      "next_price": 68081.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 73.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 10:00:00+00:00",
+      "price": 68081.4,
+      "next_price": 67952.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -129.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 10:15:00+00:00",
+      "price": 67952.0,
+      "next_price": 67967.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 15.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 10:30:00+00:00",
+      "price": 67967.0,
+      "next_price": 67876.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -90.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 10:45:00+00:00",
+      "price": 67876.2,
+      "next_price": 68177.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 300.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 11:00:00+00:00",
+      "price": 68177.1,
+      "next_price": 68138.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -38.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 11:15:00+00:00",
+      "price": 68138.8,
+      "next_price": 68117.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -21.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 11:30:00+00:00",
+      "price": 68117.0,
+      "next_price": 68027.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -89.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 11:45:00+00:00",
+      "price": 68027.1,
+      "next_price": 67985.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -42.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 12:00:00+00:00",
+      "price": 67985.0,
+      "next_price": 68023.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 38.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 12:15:00+00:00",
+      "price": 68023.6,
+      "next_price": 67937.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -86.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 12:30:00+00:00",
+      "price": 67937.0,
+      "next_price": 67990.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 53.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 12:45:00+00:00",
+      "price": 67990.4,
+      "next_price": 68042.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 51.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 13:00:00+00:00",
+      "price": 68042.0,
+      "next_price": 67982.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -60.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 13:15:00+00:00",
+      "price": 67982.0,
+      "next_price": 67892.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -89.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 13:30:00+00:00",
+      "price": 67892.1,
+      "next_price": 67922.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 30.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 13:45:00+00:00",
+      "price": 67922.1,
+      "next_price": 67739.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -183.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 14:00:00+00:00",
+      "price": 67739.1,
+      "next_price": 67806.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 67.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 14:15:00+00:00",
+      "price": 67806.3,
+      "next_price": 68027.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 220.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 14:30:00+00:00",
+      "price": 68027.0,
+      "next_price": 68027.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 0.10000000000582077,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 14:45:00+00:00",
+      "price": 68027.1,
+      "next_price": 67940.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -87.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 15:00:00+00:00",
+      "price": 67940.0,
+      "next_price": 67951.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 11.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 15:15:00+00:00",
+      "price": 67951.9,
+      "next_price": 67822.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -129.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 15:30:00+00:00",
+      "price": 67822.3,
+      "next_price": 67892.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 69.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 15:45:00+00:00",
+      "price": 67892.1,
+      "next_price": 67886.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -6.100000000005821,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 16:00:00+00:00",
+      "price": 67886.0,
+      "next_price": 67790.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -96.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 16:15:00+00:00",
+      "price": 67790.0,
+      "next_price": 67773.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -16.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 16:30:00+00:00",
+      "price": 67773.7,
+      "next_price": 67810.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 36.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 16:45:00+00:00",
+      "price": 67810.1,
+      "next_price": 67845.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 35.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 17:00:00+00:00",
+      "price": 67845.7,
+      "next_price": 67877.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 31.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 17:15:00+00:00",
+      "price": 67877.1,
+      "next_price": 67888.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 11.299999999988358,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 17:30:00+00:00",
+      "price": 67888.4,
+      "next_price": 67780.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -108.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 17:45:00+00:00",
+      "price": 67780.0,
+      "next_price": 67630.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -149.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 18:00:00+00:00",
+      "price": 67630.1,
+      "next_price": 67642.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 12.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 18:15:00+00:00",
+      "price": 67642.8,
+      "next_price": 67652.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 9.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 18:30:00+00:00",
+      "price": 67652.0,
+      "next_price": 67580.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -71.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 18:45:00+00:00",
+      "price": 67580.1,
+      "next_price": 67513.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -66.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 19:00:00+00:00",
+      "price": 67513.6,
+      "next_price": 67220.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -293.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 19:15:00+00:00",
+      "price": 67220.5,
+      "next_price": 67223.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 2.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 19:30:00+00:00",
+      "price": 67223.0,
+      "next_price": 67098.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -124.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 19:45:00+00:00",
+      "price": 67098.4,
+      "next_price": 67248.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 150.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 20:00:00+00:00",
+      "price": 67248.7,
+      "next_price": 67271.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 23.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 20:15:00+00:00",
+      "price": 67271.9,
+      "next_price": 67411.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 139.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 20:30:00+00:00",
+      "price": 67411.1,
+      "next_price": 67397.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -14.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 20:45:00+00:00",
+      "price": 67397.1,
+      "next_price": 67412.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 15.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 21:00:00+00:00",
+      "price": 67412.1,
+      "next_price": 67477.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 65.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 21:15:00+00:00",
+      "price": 67477.2,
+      "next_price": 67373.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -104.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 21:30:00+00:00",
+      "price": 67373.0,
+      "next_price": 67454.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 81.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 21:45:00+00:00",
+      "price": 67454.6,
+      "next_price": 67339.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -115.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 22:00:00+00:00",
+      "price": 67339.2,
+      "next_price": 67273.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -66.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 22:15:00+00:00",
+      "price": 67273.1,
+      "next_price": 67262.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -10.900000000008731,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 22:30:00+00:00",
+      "price": 67262.2,
+      "next_price": 67249.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -12.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 22:45:00+00:00",
+      "price": 67249.7,
+      "next_price": 67331.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 82.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 23:00:00+00:00",
+      "price": 67331.7,
+      "next_price": 67375.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 43.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 23:15:00+00:00",
+      "price": 67375.6,
+      "next_price": 67325.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -50.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 23:30:00+00:00",
+      "price": 67325.1,
+      "next_price": 67270.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -55.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-07 23:45:00+00:00",
+      "price": 67270.1,
+      "next_price": 67412.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 141.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 00:00:00+00:00",
+      "price": 67412.0,
+      "next_price": 67350.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -61.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 00:15:00+00:00",
+      "price": 67350.7,
+      "next_price": 67299.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -51.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 00:30:00+00:00",
+      "price": 67299.5,
+      "next_price": 67202.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -97.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 00:45:00+00:00",
+      "price": 67202.1,
+      "next_price": 67262.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 59.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 01:00:00+00:00",
+      "price": 67262.0,
+      "next_price": 67237.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -24.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 01:15:00+00:00",
+      "price": 67237.6,
+      "next_price": 67300.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 62.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 01:30:00+00:00",
+      "price": 67300.0,
+      "next_price": 67295.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -4.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 01:45:00+00:00",
+      "price": 67295.7,
+      "next_price": 67292.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -3.6999999999970896,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 02:00:00+00:00",
+      "price": 67292.0,
+      "next_price": 67222.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -69.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 02:15:00+00:00",
+      "price": 67222.9,
+      "next_price": 67408.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 185.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 02:30:00+00:00",
+      "price": 67408.7,
+      "next_price": 66916.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -492.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 02:45:00+00:00",
+      "price": 66916.6,
+      "next_price": 66975.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 58.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 03:00:00+00:00",
+      "price": 66975.0,
+      "next_price": 66997.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 22.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 03:15:00+00:00",
+      "price": 66997.8,
+      "next_price": 66992.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -5.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 03:30:00+00:00",
+      "price": 66992.0,
+      "next_price": 67006.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 14.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 03:45:00+00:00",
+      "price": 67006.9,
+      "next_price": 67015.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 8.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 04:00:00+00:00",
+      "price": 67015.2,
+      "next_price": 67015.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -0.09999999999126885,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 04:15:00+00:00",
+      "price": 67015.1,
+      "next_price": 66955.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -59.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 04:30:00+00:00",
+      "price": 66955.5,
+      "next_price": 66639.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -316.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 04:45:00+00:00",
+      "price": 66639.0,
+      "next_price": 66964.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 325.8999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 05:00:00+00:00",
+      "price": 66964.9,
+      "next_price": 67131.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 167.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 05:15:00+00:00",
+      "price": 67131.9,
+      "next_price": 67188.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 56.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 05:30:00+00:00",
+      "price": 67188.2,
+      "next_price": 67148.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -39.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 05:45:00+00:00",
+      "price": 67148.4,
+      "next_price": 67098.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -50.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 06:00:00+00:00",
+      "price": 67098.4,
+      "next_price": 67052.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -46.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 06:15:00+00:00",
+      "price": 67052.2,
+      "next_price": 67130.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 78.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 06:30:00+00:00",
+      "price": 67130.7,
+      "next_price": 67166.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 36.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 06:45:00+00:00",
+      "price": 67166.9,
+      "next_price": 67382.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 215.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 07:00:00+00:00",
+      "price": 67382.0,
+      "next_price": 67361.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -20.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 07:15:00+00:00",
+      "price": 67361.8,
+      "next_price": 67315.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -46.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 07:30:00+00:00",
+      "price": 67315.5,
+      "next_price": 67317.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 2.1999999999970896,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 07:45:00+00:00",
+      "price": 67317.7,
+      "next_price": 67247.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -70.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 08:00:00+00:00",
+      "price": 67247.1,
+      "next_price": 67273.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 26.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 08:15:00+00:00",
+      "price": 67273.6,
+      "next_price": 67500.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 226.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 08:30:00+00:00",
+      "price": 67500.0,
+      "next_price": 67548.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 48.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 08:45:00+00:00",
+      "price": 67548.5,
+      "next_price": 67785.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 236.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 09:00:00+00:00",
+      "price": 67785.2,
+      "next_price": 67822.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 37.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 09:15:00+00:00",
+      "price": 67822.6,
+      "next_price": 67727.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -95.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 09:30:00+00:00",
+      "price": 67727.2,
+      "next_price": 67712.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -15.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 09:45:00+00:00",
+      "price": 67712.0,
+      "next_price": 67873.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 161.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 10:00:00+00:00",
+      "price": 67873.0,
+      "next_price": 68046.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 173.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 10:15:00+00:00",
+      "price": 68046.6,
+      "next_price": 67946.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -100.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 10:30:00+00:00",
+      "price": 67946.0,
+      "next_price": 67893.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -52.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 10:45:00+00:00",
+      "price": 67893.7,
+      "next_price": 67562.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -331.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 11:00:00+00:00",
+      "price": 67562.0,
+      "next_price": 67675.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 113.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 11:15:00+00:00",
+      "price": 67675.0,
+      "next_price": 67501.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -173.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 11:30:00+00:00",
+      "price": 67501.9,
+      "next_price": 67528.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 26.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 11:45:00+00:00",
+      "price": 67528.5,
+      "next_price": 67038.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -490.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 12:00:00+00:00",
+      "price": 67038.3,
+      "next_price": 67430.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 391.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 12:15:00+00:00",
+      "price": 67430.1,
+      "next_price": 67418.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -12.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 12:30:00+00:00",
+      "price": 67418.1,
+      "next_price": 67322.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -96.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 12:45:00+00:00",
+      "price": 67322.1,
+      "next_price": 66973.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -349.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 13:00:00+00:00",
+      "price": 66973.1,
+      "next_price": 67158.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 184.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 13:15:00+00:00",
+      "price": 67158.0,
+      "next_price": 67044.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -113.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 13:30:00+00:00",
+      "price": 67044.5,
+      "next_price": 67235.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 191.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 13:45:00+00:00",
+      "price": 67235.9,
+      "next_price": 67306.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 71.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 14:00:00+00:00",
+      "price": 67306.9,
+      "next_price": 67262.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -44.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 14:15:00+00:00",
+      "price": 67262.0,
+      "next_price": 67124.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -137.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 14:30:00+00:00",
+      "price": 67124.5,
+      "next_price": 67322.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 197.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 14:45:00+00:00",
+      "price": 67322.0,
+      "next_price": 67337.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 15.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 15:00:00+00:00",
+      "price": 67337.0,
+      "next_price": 67184.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -152.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 15:15:00+00:00",
+      "price": 67184.5,
+      "next_price": 67162.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -22.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 15:30:00+00:00",
+      "price": 67162.2,
+      "next_price": 67210.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 47.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 15:45:00+00:00",
+      "price": 67210.0,
+      "next_price": 67106.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -104.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 16:00:00+00:00",
+      "price": 67106.0,
+      "next_price": 67128.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 22.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 16:15:00+00:00",
+      "price": 67128.1,
+      "next_price": 66993.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -134.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 16:30:00+00:00",
+      "price": 66993.7,
+      "next_price": 66871.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -122.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 16:45:00+00:00",
+      "price": 66871.0,
+      "next_price": 67116.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 245.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 17:00:00+00:00",
+      "price": 67116.0,
+      "next_price": 67066.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -49.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 17:15:00+00:00",
+      "price": 67066.6,
+      "next_price": 67050.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -16.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 17:30:00+00:00",
+      "price": 67050.5,
+      "next_price": 67032.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -18.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 17:45:00+00:00",
+      "price": 67032.4,
+      "next_price": 66918.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -113.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 18:00:00+00:00",
+      "price": 66918.6,
+      "next_price": 66937.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 18.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 18:15:00+00:00",
+      "price": 66937.4,
+      "next_price": 66825.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -112.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 18:30:00+00:00",
+      "price": 66825.0,
+      "next_price": 66818.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -6.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 18:45:00+00:00",
+      "price": 66818.7,
+      "next_price": 67013.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 194.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 19:00:00+00:00",
+      "price": 67013.0,
+      "next_price": 67214.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 201.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 19:15:00+00:00",
+      "price": 67214.1,
+      "next_price": 67352.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 138.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 19:30:00+00:00",
+      "price": 67352.1,
+      "next_price": 67321.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -30.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 19:45:00+00:00",
+      "price": 67321.9,
+      "next_price": 67104.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -217.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 20:00:00+00:00",
+      "price": 67104.8,
+      "next_price": 67037.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -67.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 20:15:00+00:00",
+      "price": 67037.4,
+      "next_price": 67353.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 316.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 20:30:00+00:00",
+      "price": 67353.4,
+      "next_price": 67222.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -130.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 20:45:00+00:00",
+      "price": 67222.6,
+      "next_price": 66782.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -440.6000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 21:00:00+00:00",
+      "price": 66782.0,
+      "next_price": 66925.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 143.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 21:15:00+00:00",
+      "price": 66925.6,
+      "next_price": 67019.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 93.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 21:30:00+00:00",
+      "price": 67019.1,
+      "next_price": 66991.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -27.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 21:45:00+00:00",
+      "price": 66991.7,
+      "next_price": 66062.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -929.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 22:00:00+00:00",
+      "price": 66062.0,
+      "next_price": 65920.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -142.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 22:15:00+00:00",
+      "price": 65920.0,
+      "next_price": 66062.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 142.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 22:30:00+00:00",
+      "price": 66062.0,
+      "next_price": 66242.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 180.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 22:45:00+00:00",
+      "price": 66242.0,
+      "next_price": 66312.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 70.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 23:00:00+00:00",
+      "price": 66312.1,
+      "next_price": 66470.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 158.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 23:15:00+00:00",
+      "price": 66470.9,
+      "next_price": 66137.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -333.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 23:30:00+00:00",
+      "price": 66137.1,
+      "next_price": 65978.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -158.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-08 23:45:00+00:00",
+      "price": 65978.7,
+      "next_price": 66301.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 323.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 00:00:00+00:00",
+      "price": 66301.8,
+      "next_price": 66167.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -134.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 00:15:00+00:00",
+      "price": 66167.0,
+      "next_price": 66433.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 266.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 00:30:00+00:00",
+      "price": 66433.0,
+      "next_price": 66358.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -74.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 00:45:00+00:00",
+      "price": 66358.7,
+      "next_price": 66358.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -0.39999999999417923,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 01:00:00+00:00",
+      "price": 66358.3,
+      "next_price": 66482.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 123.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 01:15:00+00:00",
+      "price": 66482.0,
+      "next_price": 66617.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 135.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 01:30:00+00:00",
+      "price": 66617.0,
+      "next_price": 66210.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -406.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 01:45:00+00:00",
+      "price": 66210.8,
+      "next_price": 66150.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -60.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 02:00:00+00:00",
+      "price": 66150.0,
+      "next_price": 66108.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -41.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 02:15:00+00:00",
+      "price": 66108.3,
+      "next_price": 66554.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 446.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 02:30:00+00:00",
+      "price": 66554.8,
+      "next_price": 66537.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -17.40000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 02:45:00+00:00",
+      "price": 66537.4,
+      "next_price": 67418.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 880.9000000000087,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 03:00:00+00:00",
+      "price": 67418.3,
+      "next_price": 67217.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -201.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 03:15:00+00:00",
+      "price": 67217.1,
+      "next_price": 67100.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -116.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 03:30:00+00:00",
+      "price": 67100.5,
+      "next_price": 67196.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 96.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 03:45:00+00:00",
+      "price": 67196.6,
+      "next_price": 67175.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -21.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 04:00:00+00:00",
+      "price": 67175.5,
+      "next_price": 67576.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 400.6000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 04:15:00+00:00",
+      "price": 67576.1,
+      "next_price": 67490.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -85.90000000000873,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 04:30:00+00:00",
+      "price": 67490.2,
+      "next_price": 67129.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -360.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 04:45:00+00:00",
+      "price": 67129.6,
+      "next_price": 67145.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 15.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 05:00:00+00:00",
+      "price": 67145.0,
+      "next_price": 67367.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 222.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 05:15:00+00:00",
+      "price": 67367.6,
+      "next_price": 67907.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 539.3999999999942,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 05:30:00+00:00",
+      "price": 67907.0,
+      "next_price": 67892.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -15.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 05:45:00+00:00",
+      "price": 67892.0,
+      "next_price": 67633.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -258.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 06:00:00+00:00",
+      "price": 67633.2,
+      "next_price": 67489.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -143.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 06:15:00+00:00",
+      "price": 67489.4,
+      "next_price": 67357.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -132.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 06:30:00+00:00",
+      "price": 67357.0,
+      "next_price": 67247.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -110.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 06:45:00+00:00",
+      "price": 67247.0,
+      "next_price": 67190.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -56.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 07:00:00+00:00",
+      "price": 67190.1,
+      "next_price": 67181.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -8.200000000011642,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 07:15:00+00:00",
+      "price": 67181.9,
+      "next_price": 67412.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 230.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 07:30:00+00:00",
+      "price": 67412.0,
+      "next_price": 67527.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 115.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 07:45:00+00:00",
+      "price": 67527.9,
+      "next_price": 67554.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 27.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 08:00:00+00:00",
+      "price": 67554.9,
+      "next_price": 67811.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 256.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 08:15:00+00:00",
+      "price": 67811.2,
+      "next_price": 67773.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -37.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 08:30:00+00:00",
+      "price": 67773.7,
+      "next_price": 67773.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -0.09999999999126885,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 08:45:00+00:00",
+      "price": 67773.6,
+      "next_price": 67787.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 13.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 09:00:00+00:00",
+      "price": 67787.0,
+      "next_price": 67990.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 203.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 09:15:00+00:00",
+      "price": 67990.4,
+      "next_price": 68353.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 362.6000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 09:30:00+00:00",
+      "price": 68353.0,
+      "next_price": 67966.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -386.1000000000058,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 09:45:00+00:00",
+      "price": 67966.9,
+      "next_price": 67911.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -55.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 10:00:00+00:00",
+      "price": 67911.1,
+      "next_price": 67802.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -109.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 10:15:00+00:00",
+      "price": 67802.1,
+      "next_price": 67651.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -150.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 10:30:00+00:00",
+      "price": 67651.9,
+      "next_price": 67606.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -45.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 10:45:00+00:00",
+      "price": 67606.3,
+      "next_price": 67697.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 90.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 11:00:00+00:00",
+      "price": 67697.0,
+      "next_price": 67442.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -254.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 11:15:00+00:00",
+      "price": 67442.1,
+      "next_price": 67608.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 166.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 11:30:00+00:00",
+      "price": 67608.2,
+      "next_price": 67750.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 142.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 11:45:00+00:00",
+      "price": 67750.3,
+      "next_price": 67887.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 137.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 12:00:00+00:00",
+      "price": 67887.3,
+      "next_price": 68131.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 244.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 12:15:00+00:00",
+      "price": 68131.9,
+      "next_price": 68117.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -14.799999999988358,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 12:30:00+00:00",
+      "price": 68117.1,
+      "next_price": 68155.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 38.29999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 12:45:00+00:00",
+      "price": 68155.4,
+      "next_price": 68479.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 323.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 13:00:00+00:00",
+      "price": 68479.2,
+      "next_price": 68752.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 273.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 13:15:00+00:00",
+      "price": 68752.9,
+      "next_price": 69232.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 479.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 13:30:00+00:00",
+      "price": 69232.1,
+      "next_price": 68987.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -245.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 13:45:00+00:00",
+      "price": 68987.0,
+      "next_price": 68845.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -141.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 14:00:00+00:00",
+      "price": 68845.5,
+      "next_price": 69152.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 306.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 14:15:00+00:00",
+      "price": 69152.0,
+      "next_price": 69428.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 276.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 14:30:00+00:00",
+      "price": 69428.5,
+      "next_price": 69137.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -291.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 14:45:00+00:00",
+      "price": 69137.0,
+      "next_price": 69152.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 15.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 15:00:00+00:00",
+      "price": 69152.0,
+      "next_price": 69090.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -61.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 15:15:00+00:00",
+      "price": 69090.5,
+      "next_price": 68780.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -310.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 15:30:00+00:00",
+      "price": 68780.0,
+      "next_price": 68909.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 129.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 15:45:00+00:00",
+      "price": 68909.9,
+      "next_price": 68807.3,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -102.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 16:00:00+00:00",
+      "price": 68807.3,
+      "next_price": 68973.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 165.6999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 16:15:00+00:00",
+      "price": 68973.0,
+      "next_price": 69092.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 119.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 16:30:00+00:00",
+      "price": 69092.2,
+      "next_price": 68975.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -116.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 16:45:00+00:00",
+      "price": 68975.8,
+      "next_price": 68987.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 11.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 17:00:00+00:00",
+      "price": 68987.0,
+      "next_price": 68644.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -342.1999999999971,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 17:15:00+00:00",
+      "price": 68644.8,
+      "next_price": 68418.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -226.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 17:30:00+00:00",
+      "price": 68418.0,
+      "next_price": 68619.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 201.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 17:45:00+00:00",
+      "price": 68619.5,
+      "next_price": 68458.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -161.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 18:00:00+00:00",
+      "price": 68458.5,
+      "next_price": 68553.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 95.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 18:15:00+00:00",
+      "price": 68553.8,
+      "next_price": 68508.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -45.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 18:30:00+00:00",
+      "price": 68508.7,
+      "next_price": 68361.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -147.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 18:45:00+00:00",
+      "price": 68361.2,
+      "next_price": 68417.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 55.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 19:00:00+00:00",
+      "price": 68417.0,
+      "next_price": 69361.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 944.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 19:15:00+00:00",
+      "price": 69361.0,
+      "next_price": 68998.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -362.3000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 19:30:00+00:00",
+      "price": 68998.7,
+      "next_price": 69017.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 18.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 19:45:00+00:00",
+      "price": 69017.0,
+      "next_price": 69002.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -14.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 20:00:00+00:00",
+      "price": 69002.1,
+      "next_price": 68984.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -17.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 20:15:00+00:00",
+      "price": 68984.9,
+      "next_price": 68910.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -74.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 20:30:00+00:00",
+      "price": 68910.9,
+      "next_price": 68998.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 87.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 20:45:00+00:00",
+      "price": 68998.7,
+      "next_price": 69042.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 44.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 21:00:00+00:00",
+      "price": 69042.8,
+      "next_price": 68867.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -175.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 21:15:00+00:00",
+      "price": 68867.0,
+      "next_price": 68968.4,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 101.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 21:30:00+00:00",
+      "price": 68968.4,
+      "next_price": 68918.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -49.79999999998836,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 21:45:00+00:00",
+      "price": 68918.6,
+      "next_price": 68826.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -91.80000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 22:00:00+00:00",
+      "price": 68826.8,
+      "next_price": 68844.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 17.89999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 22:15:00+00:00",
+      "price": 68844.7,
+      "next_price": 68753.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -91.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 22:30:00+00:00",
+      "price": 68753.7,
+      "next_price": 68652.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -101.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 22:45:00+00:00",
+      "price": 68652.2,
+      "next_price": 68656.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 4.69999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 23:00:00+00:00",
+      "price": 68656.9,
+      "next_price": 68603.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -53.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 23:15:00+00:00",
+      "price": 68603.8,
+      "next_price": 68562.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -41.30000000000291,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 23:30:00+00:00",
+      "price": 68562.5,
+      "next_price": 68446.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -115.60000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-09 23:45:00+00:00",
+      "price": 68446.9,
+      "next_price": 68432.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -14.799999999988358,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 00:00:00+00:00",
+      "price": 68432.1,
+      "next_price": 68987.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 555.0,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 00:15:00+00:00",
+      "price": 68987.1,
+      "next_price": 69188.7,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 201.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 00:30:00+00:00",
+      "price": 69188.7,
+      "next_price": 69163.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -25.5,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 00:45:00+00:00",
+      "price": 69163.2,
+      "next_price": 69122.1,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -41.09999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 01:00:00+00:00",
+      "price": 69122.1,
+      "next_price": 68978.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -143.20000000001164,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 01:15:00+00:00",
+      "price": 68978.9,
+      "next_price": 68972.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -6.899999999994179,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 01:30:00+00:00",
+      "price": 68972.0,
+      "next_price": 69281.8,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 309.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 01:45:00+00:00",
+      "price": 69281.8,
+      "next_price": 69231.6,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -50.19999999999709,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 02:00:00+00:00",
+      "price": 69231.6,
+      "next_price": 69386.2,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 154.59999999999127,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 02:15:00+00:00",
+      "price": 69386.2,
+      "next_price": 70322.0,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "WIN",
+      "change": 935.8000000000029,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 02:30:00+00:00",
+      "price": 70322.0,
+      "next_price": 70276.9,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -45.10000000000582,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    },
+    {
+      "timestamp": "2026-03-10 02:45:00+00:00",
+      "price": 70276.9,
+      "next_price": 70177.5,
+      "signal": "UP",
+      "confidence": 0.5,
+      "outcome": "LOSS",
+      "change": -99.39999999999418,
+      "reasoning": "Error: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or"
+    }
+  ]
+}
