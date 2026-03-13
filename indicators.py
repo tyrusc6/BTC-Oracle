@@ -1,7 +1,6 @@
 """
-BTC Oracle - Technical Indicators Calculator (FIXED)
-Uses Kraken OHLC candles for accurate indicator calculation.
-Uses tick data for granular real-time analysis.
+BTC Oracle - Technical Indicators (Production Grade)
+Uses Kraken OHLC candles for accurate calculations.
 """
 
 import numpy as np
@@ -13,8 +12,7 @@ import db
 
 def fetch_recent_ticks(minutes=60):
     cutoff = (datetime.now(timezone.utc) - timedelta(minutes=minutes)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")
-    params = f"recorded_at=gte.{cutoff}&order=recorded_at.asc"
-    data = db.select("tick_data", params)
+    data = db.select("tick_data", f"recorded_at=gte.{cutoff}&order=recorded_at.asc&limit=2000")
     if data:
         df = pd.DataFrame(data)
         df["recorded_at"] = pd.to_datetime(df["recorded_at"])
@@ -22,11 +20,22 @@ def fetch_recent_ticks(minutes=60):
     return pd.DataFrame()
 
 
-def fetch_kraken_ohlc(interval=1, count=200):
-    """Fetch OHLC candles directly from Kraken for accurate indicators."""
+def get_current_price():
+    """Get current BTC price directly from Kraken API."""
     try:
-        url = f"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval={interval}"
-        resp = requests.get(url, timeout=10)
+        resp = requests.get("https://api.kraken.com/0/public/Ticker?pair=XBTUSD", timeout=10)
+        data = resp.json()
+        if data.get("result"):
+            return float(data["result"]["XXBTZUSD"]["c"][0])
+    except:
+        pass
+    return None
+
+
+def fetch_kraken_ohlc(interval=1, count=200):
+    """Fetch OHLC candles from Kraken."""
+    try:
+        resp = requests.get(f"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval={interval}", timeout=10)
         data = resp.json()
         if data.get("result"):
             candles = data["result"].get("XXBTZUSD", [])
@@ -45,42 +54,34 @@ def calculate_rsi(prices, period=14):
     if len(prices) < period + 1:
         return None
     deltas = np.diff(prices)
-    # Use Wilder's smoothing (exponential) for more accurate RSI
     gains = np.where(deltas > 0, deltas, 0)
     losses = np.where(deltas < 0, -deltas, 0)
-    
     avg_gain = np.mean(gains[:period])
     avg_loss = np.mean(losses[:period])
-    
     for i in range(period, len(gains)):
         avg_gain = (avg_gain * (period - 1) + gains[i]) / period
         avg_loss = (avg_loss * (period - 1) + losses[i]) / period
-    
     if avg_loss == 0:
         return 100.0 if avg_gain > 0 else 50.0
-    rs = avg_gain / avg_loss
-    return 100 - (100 / (1 + rs))
+    return 100 - (100 / (1 + avg_gain / avg_loss))
 
 
 def calculate_macd(prices, fast=12, slow=26, signal=9):
     if len(prices) < slow + signal:
         return None, None, None
-    series = pd.Series(prices)
-    ema_fast = series.ewm(span=fast, adjust=False).mean()
-    ema_slow = series.ewm(span=slow, adjust=False).mean()
-    macd_line = ema_fast - ema_slow
+    s = pd.Series(prices)
+    macd_line = s.ewm(span=fast, adjust=False).mean() - s.ewm(span=slow, adjust=False).mean()
     signal_line = macd_line.ewm(span=signal, adjust=False).mean()
-    histogram = macd_line - signal_line
-    return float(macd_line.iloc[-1]), float(signal_line.iloc[-1]), float(histogram.iloc[-1])
+    return float(macd_line.iloc[-1]), float(signal_line.iloc[-1]), float((macd_line - signal_line).iloc[-1])
 
 
-def calculate_bollinger_bands(prices, period=20, std_dev=2):
+def calculate_bollinger(prices, period=20, std_dev=2):
     if len(prices) < period:
         return None, None, None
-    series = pd.Series(prices)
-    middle = series.rolling(window=period).mean().iloc[-1]
-    std = series.rolling(window=period).std().iloc[-1]
-    return float(middle + std_dev * std), float(middle), float(middle - std_dev * std)
+    s = pd.Series(prices)
+    mid = float(s.rolling(period).mean().iloc[-1])
+    std = float(s.rolling(period).std().iloc[-1])
+    return mid + std_dev * std, mid, mid - std_dev * std
 
 
 def calculate_ema(prices, period):
@@ -89,166 +90,108 @@ def calculate_ema(prices, period):
     return float(pd.Series(prices).ewm(span=period, adjust=False).mean().iloc[-1])
 
 
-def calculate_sma(prices, period):
-    if len(prices) < period:
-        return None
-    return float(np.mean(prices[-period:]))
-
-
-def calculate_momentum(prices, period=10):
-    if len(prices) < period + 1:
-        return None
-    return float(prices[-1] - prices[-period - 1])
-
-
-def calculate_vwap(prices, volumes):
-    if len(prices) == 0 or len(volumes) == 0:
-        return None
-    prices = np.array(prices, dtype=float)
-    volumes = np.array(volumes, dtype=float)
-    valid = ~np.isnan(volumes) & (volumes > 0)
-    if not np.any(valid):
-        return None
-    return float(np.sum(prices[valid] * volumes[valid]) / np.sum(volumes[valid]))
-
-
 def calculate_stoch_rsi(prices, period=14):
-    if len(prices) < period * 2:
+    """Optimized StochRSI - calculate RSI series efficiently."""
+    if len(prices) < period * 2 + 3:
         return None, None
+    
+    # Calculate full RSI series at once
+    deltas = np.diff(prices)
+    gains = np.where(deltas > 0, deltas, 0)
+    losses = np.where(deltas < 0, -deltas, 0)
+    
     rsi_values = []
-    for i in range(period, len(prices)):
-        rsi = calculate_rsi(prices[:i+1], period)
-        if rsi is not None:
-            rsi_values.append(rsi)
+    avg_gain = np.mean(gains[:period])
+    avg_loss = np.mean(losses[:period])
+    
+    for i in range(period, len(gains)):
+        avg_gain = (avg_gain * (period - 1) + gains[i]) / period
+        avg_loss = (avg_loss * (period - 1) + losses[i]) / period
+        if avg_loss == 0:
+            rsi_values.append(100.0 if avg_gain > 0 else 50.0)
+        else:
+            rsi_values.append(100 - (100 / (1 + avg_gain / avg_loss)))
+    
     if len(rsi_values) < period:
         return None, None
-    series = pd.Series(rsi_values)
-    lowest = series.rolling(period).min()
-    highest = series.rolling(period).max()
+    
+    s = pd.Series(rsi_values)
+    lowest = s.rolling(period).min()
+    highest = s.rolling(period).max()
     diff = highest - lowest
     diff = diff.replace(0, np.nan)
-    stoch_rsi = (series - lowest) / diff
-    k = stoch_rsi.rolling(3).mean()
-    d = k.rolling(3).mean()
-    k_val = float(k.iloc[-1]) * 100 if not pd.isna(k.iloc[-1]) else None
-    d_val = float(d.iloc[-1]) * 100 if not pd.isna(d.iloc[-1]) else None
+    stoch = ((s - lowest) / diff).rolling(3).mean()
+    d = stoch.rolling(3).mean()
+    
+    k_val = float(stoch.iloc[-1]) * 100 if pd.notna(stoch.iloc[-1]) else None
+    d_val = float(d.iloc[-1]) * 100 if pd.notna(d.iloc[-1]) else None
     return round(k_val, 2) if k_val else None, round(d_val, 2) if d_val else None
 
 
 def calculate_atr(highs, lows, closes, period=14):
-    """Proper ATR using high/low/close from candles."""
     if len(closes) < period + 1:
         return None
-    true_ranges = []
-    for i in range(1, len(closes)):
-        tr = max(
-            highs[i] - lows[i],
-            abs(highs[i] - closes[i-1]),
-            abs(lows[i] - closes[i-1])
-        )
-        true_ranges.append(tr)
-    if len(true_ranges) < period:
-        return None
-    return float(np.mean(true_ranges[-period:]))
+    tr = [max(highs[i] - lows[i], abs(highs[i] - closes[i-1]), abs(lows[i] - closes[i-1])) for i in range(1, len(closes))]
+    return float(np.mean(tr[-period:])) if len(tr) >= period else None
 
 
 def calculate_obv_trend(prices, volumes):
-    if len(prices) < 10 or len(volumes) < 10:
+    if len(prices) < 10:
         return None
     obv = [0]
     for i in range(1, len(prices)):
-        vol = volumes[i] if not np.isnan(volumes[i]) and volumes[i] > 0 else 0
+        v = volumes[i] if not np.isnan(volumes[i]) and volumes[i] > 0 else 0
         if prices[i] > prices[i-1]:
-            obv.append(obv[-1] + vol)
+            obv.append(obv[-1] + v)
         elif prices[i] < prices[i-1]:
-            obv.append(obv[-1] - vol)
+            obv.append(obv[-1] - v)
         else:
             obv.append(obv[-1])
-    if len(obv) >= 10:
-        return "RISING" if np.mean(obv[-5:]) > np.mean(obv[-10:-5]) else "FALLING"
-    return None
+    return "RISING" if np.mean(obv[-5:]) > np.mean(obv[-10:-5]) else "FALLING" if len(obv) >= 10 else None
 
 
 def detect_trend(prices):
-    """Detect the current price trend using multiple methods."""
+    """Multi-method trend detection."""
     if len(prices) < 20:
         return "UNKNOWN", 0
     
-    # Method 1: Price vs moving averages
     current = prices[-1]
     sma_10 = np.mean(prices[-10:])
     sma_20 = np.mean(prices[-20:])
+    slope = np.polyfit(np.arange(20), prices[-20:], 1)[0]
     
-    # Method 2: Linear regression slope
-    x = np.arange(len(prices[-20:]))
-    slope = np.polyfit(x, prices[-20:], 1)[0]
-    
-    # Method 3: Higher highs / lower lows
     recent_5 = prices[-5:]
     prev_5 = prices[-10:-5]
     higher_highs = max(recent_5) > max(prev_5)
     higher_lows = min(recent_5) > min(prev_5)
     
-    # Method 4: Percentage change over last 30 candles
-    pct_change = ((prices[-1] - prices[-min(30, len(prices))]) / prices[-min(30, len(prices))]) * 100
+    pct = ((prices[-1] - prices[-min(30, len(prices))]) / prices[-min(30, len(prices))]) * 100
     
-    # Score the trend
-    trend_score = 0
-    if current > sma_10:
-        trend_score += 1
-    else:
-        trend_score -= 1
-    if current > sma_20:
-        trend_score += 1
-    else:
-        trend_score -= 1
-    if sma_10 > sma_20:
-        trend_score += 1
-    else:
-        trend_score -= 1
-    if slope > 0:
-        trend_score += 1
-    else:
-        trend_score -= 1
-    if higher_highs and higher_lows:
-        trend_score += 1
-    elif not higher_highs and not higher_lows:
-        trend_score -= 1
+    score = 0
+    score += 1 if current > sma_10 else -1
+    score += 1 if current > sma_20 else -1
+    score += 1 if sma_10 > sma_20 else -1
+    score += 1 if slope > 0 else -1
+    score += 1 if higher_highs and higher_lows else (-1 if not higher_highs and not higher_lows else 0)
     
-    if trend_score >= 3:
-        trend = "STRONG_UPTREND"
-    elif trend_score >= 1:
-        trend = "UPTREND"
-    elif trend_score <= -3:
-        trend = "STRONG_DOWNTREND"
-    elif trend_score <= -1:
-        trend = "DOWNTREND"
-    else:
-        trend = "SIDEWAYS"
+    if score >= 3: trend = "STRONG_UPTREND"
+    elif score >= 1: trend = "UPTREND"
+    elif score <= -3: trend = "STRONG_DOWNTREND"
+    elif score <= -1: trend = "DOWNTREND"
+    else: trend = "SIDEWAYS"
     
-    return trend, round(pct_change, 4)
+    return trend, round(pct, 4)
 
 
 def get_all_indicators():
     print("Calculating indicators...")
     
-    # Use Kraken OHLC candles for accurate indicators (1-min candles)
     df_1m = fetch_kraken_ohlc(interval=1, count=200)
     df_5m = fetch_kraken_ohlc(interval=5, count=100)
     
     if df_1m.empty or len(df_1m) < 30:
         print("  Not enough OHLC data from Kraken")
-        # Fallback to tick data
-        tick_df = fetch_recent_ticks(minutes=120)
-        if tick_df.empty or len(tick_df) < 30:
-            print(f"  Not enough tick data either ({len(tick_df) if not tick_df.empty else 0} ticks)")
-            return None
-        # Resample ticks to 1-min candles
-        tick_df = tick_df.set_index("recorded_at")
-        df_1m = tick_df["price"].resample("1min").ohlc().dropna()
-        df_1m.columns = ["open", "high", "low", "close"]
-        df_1m["volume"] = tick_df["volume"].resample("1min").sum().fillna(0)
-        df_1m = df_1m.reset_index()
+        return None
     
     prices = df_1m["close"].values.astype(float)
     highs = df_1m["high"].values.astype(float)
@@ -256,34 +199,27 @@ def get_all_indicators():
     volumes = df_1m["volume"].values.astype(float)
     current_price = float(prices[-1])
     
-    # Calculate all indicators from proper candle data
     rsi = calculate_rsi(prices)
     macd, macd_sig, macd_hist = calculate_macd(prices)
-    bb_upper, bb_middle, bb_lower = calculate_bollinger_bands(prices)
+    bb_upper, bb_middle, bb_lower = calculate_bollinger(prices)
     stoch_k, stoch_d = calculate_stoch_rsi(prices)
     atr = calculate_atr(highs, lows, prices)
-    obv_trend = calculate_obv_trend(prices, volumes)
+    obv = calculate_obv_trend(prices, volumes)
     roc = round(((prices[-1] - prices[-11]) / prices[-11]) * 100, 4) if len(prices) >= 11 else None
-    vwap = calculate_vwap(prices, volumes)
+    vwap = float(np.sum(prices * volumes) / np.sum(volumes)) if np.sum(volumes) > 0 else None
+    ema_9 = calculate_ema(prices, 9)
+    ema_21 = calculate_ema(prices, 21)
+    sma_50 = float(np.mean(prices[-50:])) if len(prices) >= 50 else None
+    momentum = float(prices[-1] - prices[-11]) if len(prices) >= 11 else None
     
-    # Trend detection
-    trend, trend_pct = detect_trend(prices)
-    
-    # Also detect trend on 5-min candles for higher timeframe
+    trend_1m, trend_pct = detect_trend(prices)
     trend_5m = "UNKNOWN"
     if not df_5m.empty and len(df_5m) >= 20:
-        prices_5m = df_5m["close"].values.astype(float)
-        trend_5m, _ = detect_trend(prices_5m)
+        trend_5m, _ = detect_trend(df_5m["close"].values.astype(float))
     
-    # Bollinger Band position
     bb_position = None
     if bb_upper and bb_lower and bb_upper != bb_lower:
         bb_position = round((current_price - bb_lower) / (bb_upper - bb_lower), 4)
-    
-    ema_9 = calculate_ema(prices, 9)
-    ema_21 = calculate_ema(prices, 21)
-    sma_50 = calculate_sma(prices, 50)
-    momentum = calculate_momentum(prices)
     
     indicators = {
         "current_price": current_price,
@@ -306,8 +242,8 @@ def get_all_indicators():
         "stoch_rsi_k": stoch_k,
         "stoch_rsi_d": stoch_d,
         "atr": round(atr, 2) if atr else None,
-        "obv_trend": obv_trend,
-        "trend_1m": trend,
+        "obv_trend": obv,
+        "trend_1m": trend_1m,
         "trend_5m": trend_5m,
         "trend_pct_change": trend_pct,
         "volume_24h": float(volumes[-1]) if len(volumes) > 0 else None,
@@ -315,15 +251,12 @@ def get_all_indicators():
         "data_span_minutes": len(df_1m)
     }
     
-    print(f"  Price: ${current_price:,.2f} | RSI: {indicators['rsi']} | Trend 1m: {trend} | Trend 5m: {trend_5m} | OBV: {obv_trend}")
+    print(f"  ${current_price:,.2f} | RSI: {indicators['rsi']} | Trend: {trend_1m}/{trend_5m} | OBV: {obv}")
     return indicators
 
 
 if __name__ == "__main__":
-    result = get_all_indicators()
-    if result:
-        print("Indicators calculated!")
-        for k, v in result.items():
+    r = get_all_indicators()
+    if r:
+        for k, v in r.items():
             print(f"  {k}: {v}")
-    else:
-        print("Need more data.")

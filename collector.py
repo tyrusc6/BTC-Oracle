@@ -1,6 +1,5 @@
 """
-BTC Oracle - Data Collector
-Pulls live BTC tick data from Kraken and stores in Supabase.
+BTC Oracle - Data Collector (Production Grade)
 """
 
 import json
@@ -16,15 +15,14 @@ load_dotenv()
 
 tick_buffer = []
 buffer_lock = threading.Lock()
+MAX_BUFFER = 500  # prevent memory buildup
 
 
 def get_kraken_ticker():
     try:
-        url = "https://api.kraken.com/0/public/Ticker?pair=XBTUSD"
-        resp = requests.get(url, timeout=10)
+        resp = requests.get("https://api.kraken.com/0/public/Ticker?pair=XBTUSD", timeout=10)
         data = resp.json()
         if data.get("error") and len(data["error"]) > 0:
-            print(f"Kraken API error: {data['error']}")
             return None
         result = data["result"]["XXBTZUSD"]
         return {
@@ -32,20 +30,25 @@ def get_kraken_ticker():
             "volume": float(result["v"][1]),
             "bid": float(result["b"][0]),
             "ask": float(result["a"][0]),
-            "spread": float(result["a"][0]) - float(result["b"][0])
+            "spread": round(float(result["a"][0]) - float(result["b"][0]), 2)
         }
-    except Exception as e:
-        print(f"Error fetching ticker: {e}")
+    except:
         return None
 
 
 def store_ticks(ticks):
+    """Batch insert ticks in one request."""
+    if not ticks:
+        return
     try:
-        if not ticks:
-            return
-        for tick in ticks:
-            db.insert("tick_data", tick)
-        print(f"  Stored {len(ticks)} ticks | Latest: ${ticks[-1]['price']:,.2f}")
+        result = db.batch_insert("tick_data", ticks)
+        if result:
+            print(f"  Stored {len(ticks)} ticks | Latest: ${ticks[-1]['price']:,.2f}")
+        else:
+            # Fallback to individual inserts
+            for tick in ticks:
+                db.insert("tick_data", tick)
+            print(f"  Stored {len(ticks)} ticks (individual) | Latest: ${ticks[-1]['price']:,.2f}")
     except Exception as e:
         print(f"Error storing ticks: {e}")
 
@@ -65,6 +68,9 @@ def on_ws_message(ws, message):
                     }
                     with buffer_lock:
                         tick_buffer.append(tick)
+                        # Prevent memory buildup
+                        if len(tick_buffer) > MAX_BUFFER:
+                            tick_buffer = tick_buffer[-MAX_BUFFER:]
     except:
         pass
 
@@ -81,12 +87,11 @@ def on_ws_close(ws, close_status_code, close_msg):
 
 def on_ws_open(ws):
     print("WebSocket connected to Kraken!")
-    subscribe = {
+    ws.send(json.dumps({
         "event": "subscribe",
         "pair": ["XBT/USD"],
         "subscription": {"name": "trade"}
-    }
-    ws.send(json.dumps(subscribe))
+    }))
     print("Subscribed to BTC/USD trades")
 
 
@@ -98,8 +103,7 @@ def start_websocket():
         on_error=on_ws_error,
         on_close=on_ws_close
     )
-    ws_thread = threading.Thread(target=ws.run_forever, daemon=True)
-    ws_thread.start()
+    threading.Thread(target=ws.run_forever, daemon=True).start()
     return ws
 
 
@@ -114,29 +118,6 @@ def flush_buffer():
         store_ticks(ticks_to_store)
 
 
-def run_rest_collector():
-    print("Running REST API collector (1s intervals)...")
-    batch = []
-    while True:
-        try:
-            ticker = get_kraken_ticker()
-            if ticker:
-                batch.append(ticker)
-                print(f"  BTC: ${ticker['price']:,.2f} | Vol: {ticker['volume']:,.0f} | Spread: ${ticker['spread']:.2f}")
-                if len(batch) >= 50:
-                    store_ticks(batch)
-                    batch = []
-            time.sleep(1)
-        except KeyboardInterrupt:
-            print("\nStopping collector...")
-            if batch:
-                store_ticks(batch)
-            break
-        except Exception as e:
-            print(f"Error: {e}")
-            time.sleep(5)
-
-
 def run_collector():
     print("=" * 50)
     print("BTC ORACLE - DATA COLLECTOR")
@@ -146,7 +127,7 @@ def run_collector():
 
     try:
         print("Attempting WebSocket connection...")
-        ws = start_websocket()
+        start_websocket()
         time.sleep(3)
         print("Flushing tick buffer every 2 seconds...")
         while True:
@@ -155,7 +136,23 @@ def run_collector():
     except Exception as e:
         print(f"WebSocket failed: {e}")
         print("Falling back to REST API...")
-        run_rest_collector()
+        batch = []
+        while True:
+            try:
+                ticker = get_kraken_ticker()
+                if ticker:
+                    batch.append(ticker)
+                    if len(batch) >= 30:
+                        store_ticks(batch)
+                        batch = []
+                time.sleep(1)
+            except KeyboardInterrupt:
+                if batch:
+                    store_ticks(batch)
+                break
+            except Exception as e:
+                print(f"Error: {e}")
+                time.sleep(5)
 
 
 if __name__ == "__main__":
