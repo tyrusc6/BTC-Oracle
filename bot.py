@@ -217,7 +217,33 @@ def update_performance():
         else:
             break
     db.insert("performance", {"total_signals": total, "total_wins": wins, "total_losses": losses, "win_rate": win_rate, "streak_current": streak})
-    print(f"  {win_rate:.1%} ({wins}W/{losses}L) | Streak: {streak}")
+    print(f"  Overall: {win_rate:.1%} ({wins}W/{losses}L) | Streak: {streak}")
+
+    # V4 performance - only count TRADE signals (not WAIT)
+    v4_data = db.select("signals", "outcome=not.is.null&analysis_notes=like.*TRADE*&select=outcome,analysis_notes")
+    if v4_data:
+        trades = [s for s in v4_data if s.get("analysis_notes", "").startswith("[TRADE]")]
+        waits = [s for s in v4_data if s.get("analysis_notes", "").startswith("[WAIT]")]
+        trade_wins = len([s for s in trades if s["outcome"] == "WIN"])
+        trade_losses = len([s for s in trades if s["outcome"] == "LOSS"])
+        trade_total = trade_wins + trade_losses
+        trade_wr = trade_wins / trade_total if trade_total > 0 else 0
+        all_v4 = trades + waits
+        all_v4_wins = len([s for s in all_v4 if s["outcome"] == "WIN"])
+        all_v4_total = len(all_v4)
+        overall_v4_wr = all_v4_wins / all_v4_total if all_v4_total > 0 else 0
+
+        db.insert("performance_v4", {
+            "total_signals": all_v4_total,
+            "total_trades": trade_total,
+            "total_waits": len(waits),
+            "trade_wins": trade_wins,
+            "trade_losses": trade_losses,
+            "trade_win_rate": trade_wr,
+            "overall_win_rate": overall_v4_wr,
+            "streak_current": streak
+        })
+        print(f"  V4 TRADE: {trade_wr:.1%} ({trade_wins}W/{trade_losses}L) out of {trade_total} trades | {len(waits)} waited")
 
 
 def run_signal_cycle():
