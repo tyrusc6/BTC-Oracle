@@ -12,66 +12,94 @@ import numpy as np
 def should_trade(score, score_confidence, claude_signal, claude_confidence, 
                  regime_data, indicators, market_data=None):
     """
-    Decide if this signal is worth trading or should WAIT.
+    STRICT filter - only trade high-probability setups.
     Returns (should_trade: bool, reason: str, adjusted_confidence: float)
     """
     reasons_to_trade = []
     reasons_to_wait = []
     
-    # Rule 1: Scoring model and Claude must agree
+    # Rule 1: Scoring model and Claude MUST agree (hard requirement)
     score_signal = "UP" if score > 0 else "DOWN"
     if score_signal == claude_signal:
         reasons_to_trade.append("Model and Claude AGREE")
     else:
-        reasons_to_wait.append(f"Model says {score_signal}, Claude says {claude_signal} - DISAGREE")
+        reasons_to_wait.append(f"DISAGREE: model={score_signal} claude={claude_signal}")
+        # Disagreement is an automatic WAIT
+        adjusted = min(0.4, (score_confidence + claude_confidence) / 2)
+        return False, f"WAIT (DISAGREE): {reasons_to_wait[0]}", round(adjusted, 3)
     
-    # Rule 2: Minimum confidence threshold
-    min_confidence = 0.65
-    if score_confidence >= min_confidence and claude_confidence >= min_confidence:
-        reasons_to_trade.append(f"Both confidence above {min_confidence:.0%}")
+    # Rule 2: High confidence required (raised from 0.65 to 0.75)
+    min_confidence = 0.75
+    if score_confidence >= min_confidence and claude_confidence >= 0.70:
+        reasons_to_trade.append(f"High confidence: model {score_confidence:.0%}, Claude {claude_confidence:.0%}")
     else:
         reasons_to_wait.append(f"Low confidence: model {score_confidence:.0%}, Claude {claude_confidence:.0%}")
     
-    # Rule 3: Regime must support the trade
+    # Rule 3: Score magnitude must be strong
+    if abs(score) > 0.5:
+        reasons_to_trade.append(f"Strong score: {score:+.3f}")
+    elif abs(score) > 0.35:
+        pass  # neutral, neither helps nor hurts
+    else:
+        reasons_to_wait.append(f"Weak score: {score:+.3f}")
+    
+    # Rule 4: Regime must support the trade
     regime = regime_data.get("regime", "UNKNOWN")
     if regime in ("TRENDING_UP", "BREAKOUT_UP") and claude_signal == "UP":
         reasons_to_trade.append(f"Regime {regime} supports UP")
     elif regime in ("TRENDING_DOWN", "BREAKOUT_DOWN") and claude_signal == "DOWN":
         reasons_to_trade.append(f"Regime {regime} supports DOWN")
     elif regime == "HIGH_VOLATILITY":
-        reasons_to_wait.append("HIGH_VOLATILITY regime - signals unreliable")
+        reasons_to_wait.append("HIGH_VOLATILITY - skip")
     elif regime == "CHOPPY":
-        reasons_to_wait.append("CHOPPY regime - no clear direction")
+        reasons_to_wait.append("CHOPPY - skip")
     elif regime == "RANGING":
-        # In ranging, mean reversion works - check if at extremes
         bb_pos = indicators.get("bollinger_position")
-        if bb_pos is not None and (bb_pos < 0.15 or bb_pos > 0.85):
-            reasons_to_trade.append("RANGING at extreme - good mean reversion setup")
+        if bb_pos is not None and (bb_pos < 0.1 or bb_pos > 0.9):
+            reasons_to_trade.append("RANGING at extreme")
         else:
-            reasons_to_wait.append("RANGING but not at extremes")
+            reasons_to_wait.append("RANGING not at extreme")
+    elif regime in ("WEAK_UPTREND", "WEAK_DOWNTREND"):
+        reasons_to_wait.append(f"Weak trend: {regime}")
     
-    # Rule 4: Trend alignment
+    # Rule 5: Both timeframe trends must align
     trend_1m = indicators.get("trend_1m", "UNKNOWN")
     trend_5m = indicators.get("trend_5m", "UNKNOWN")
     
     if claude_signal == "UP" and "UPTREND" in trend_1m and "UPTREND" in trend_5m:
-        reasons_to_trade.append("Both timeframe trends align with signal")
+        reasons_to_trade.append("Both trends align UP")
     elif claude_signal == "DOWN" and "DOWNTREND" in trend_1m and "DOWNTREND" in trend_5m:
-        reasons_to_trade.append("Both timeframe trends align with signal")
-    elif trend_1m == "SIDEWAYS" or trend_5m == "SIDEWAYS":
-        reasons_to_wait.append("Sideways trend on one timeframe")
+        reasons_to_trade.append("Both trends align DOWN")
+    elif "SIDEWAYS" in trend_1m or "SIDEWAYS" in trend_5m or "UNKNOWN" in trend_1m:
+        reasons_to_wait.append("Unclear trend")
     
-    # Rule 5: Order book and trade flow confirmation
+    # Rule 6: Order book and trade flow (live data only)
     if market_data:
         ob = market_data.get("orderbook_imbalance_signal", "BALANCED")
         tf = market_data.get("trade_flow_signal", "NEUTRAL")
         
         if claude_signal == "UP" and ob == "BUY_PRESSURE" and tf == "BUYING":
-            reasons_to_trade.append("Order book + trade flow confirm UP")
+            reasons_to_trade.append("Order flow confirms UP")
         elif claude_signal == "DOWN" and ob == "SELL_PRESSURE" and tf == "SELLING":
-            reasons_to_trade.append("Order book + trade flow confirm DOWN")
-        elif ob == "BALANCED" and tf == "NEUTRAL":
-            reasons_to_wait.append("No order flow confirmation")
+            reasons_to_trade.append("Order flow confirms DOWN")
+        elif (ob == "BUY_PRESSURE" and claude_signal == "DOWN") or (ob == "SELL_PRESSURE" and claude_signal == "UP"):
+            reasons_to_wait.append("Order flow CONTRADICTS signal")
+    
+    # Decision: need 4+ reasons to trade AND more trade than wait reasons
+    trade_score = len(reasons_to_trade)
+    wait_score = len(reasons_to_wait)
+    
+    should = trade_score >= 4 and trade_score > wait_score
+    
+    if should:
+        adjusted = min(0.95, (score_confidence + claude_confidence) / 2 + 0.05 * trade_score)
+    else:
+        adjusted = min(0.5, (score_confidence + claude_confidence) / 2 - 0.05 * wait_score)
+    
+    reason = f"TRADE ({trade_score} for, {wait_score} against)" if should else f"WAIT ({wait_score} against, {trade_score} for)"
+    detail = " | ".join(reasons_to_trade + reasons_to_wait)
+    
+    return should, f"{reason}: {detail}", round(adjusted, 3)
     
     # Rule 6: Strong score magnitude
     if abs(score) > 0.5:
