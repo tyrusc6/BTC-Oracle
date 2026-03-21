@@ -10,7 +10,7 @@ import numpy as np
 from datetime import datetime, timezone
 
 # V5 epoch - only learn from signals after this point
-V5_EPOCH = "2026-03-13T00:00:00Z"
+V5_EPOCH = "2020-01-01T00:00:00Z"
 
 # Tier weights - these get adjusted by learning
 DEFAULT_TIER_WEIGHTS = {
