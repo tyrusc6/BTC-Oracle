@@ -320,7 +320,8 @@ def run_signal_cycle():
     # SIGNAL FILTER - should we trade or wait?
     trade, filter_reason, adjusted_conf = should_trade(
         score, score_conf, signal_data["signal"], signal_data["confidence"],
-        regime_data, indicators, market_data
+        regime_data, indicators, market_data,
+        lgbm_signal=lgbm_dir, lgbm_conf=lgbm_conf
     )
 
     print(f"\n  >>> SIGNAL: {signal_data['signal']} ({signal_data['confidence']:.0%})")

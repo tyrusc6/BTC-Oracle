@@ -9,40 +9,38 @@ import db
 import numpy as np
 
 
-def should_trade(score, score_confidence, claude_signal, claude_confidence, 
-                 regime_data, indicators, market_data=None):
+def should_trade(score, score_confidence, claude_signal, claude_confidence,
+                 regime_data, indicators, market_data=None, lgbm_signal=None, lgbm_conf=0.0):
     """
     STRICT filter - only trade high-probability setups.
     Returns (should_trade: bool, reason: str, adjusted_confidence: float)
     """
     reasons_to_trade = []
     reasons_to_wait = []
-    
+
     # Rule 1: Scoring model and Claude MUST agree (hard requirement)
     score_signal = "UP" if score > 0 else "DOWN"
     if score_signal == claude_signal:
         reasons_to_trade.append("Model and Claude AGREE")
     else:
         reasons_to_wait.append(f"DISAGREE: model={score_signal} claude={claude_signal}")
-        # Disagreement is an automatic WAIT
         adjusted = min(0.4, (score_confidence + claude_confidence) / 2)
         return False, f"WAIT (DISAGREE): {reasons_to_wait[0]}", round(adjusted, 3)
-    
-    # Rule 2: High confidence required (raised from 0.65 to 0.75)
-    min_confidence = 0.75
-    if score_confidence >= min_confidence and claude_confidence >= 0.70:
+
+    # Rule 2: High confidence required
+    if score_confidence >= 0.80 and claude_confidence >= 0.75:
         reasons_to_trade.append(f"High confidence: model {score_confidence:.0%}, Claude {claude_confidence:.0%}")
+    elif score_confidence >= 0.70 and claude_confidence >= 0.65:
+        pass  # Acceptable but doesn't count as a reason
     else:
         reasons_to_wait.append(f"Low confidence: model {score_confidence:.0%}, Claude {claude_confidence:.0%}")
-    
+
     # Rule 3: Score magnitude must be strong
     if abs(score) > 0.5:
         reasons_to_trade.append(f"Strong score: {score:+.3f}")
-    elif abs(score) > 0.35:
-        pass  # neutral, neither helps nor hurts
-    else:
+    elif abs(score) < 0.3:
         reasons_to_wait.append(f"Weak score: {score:+.3f}")
-    
+
     # Rule 4: Regime must support the trade
     regime = regime_data.get("regime", "UNKNOWN")
     if regime in ("TRENDING_UP", "BREAKOUT_UP") and claude_signal == "UP":
@@ -61,44 +59,58 @@ def should_trade(score, score_confidence, claude_signal, claude_confidence,
             reasons_to_wait.append("RANGING not at extreme")
     elif regime in ("WEAK_UPTREND", "WEAK_DOWNTREND"):
         reasons_to_wait.append(f"Weak trend: {regime}")
-    
+
     # Rule 5: Both timeframe trends must align
     trend_1m = indicators.get("trend_1m", "UNKNOWN")
     trend_5m = indicators.get("trend_5m", "UNKNOWN")
-    
+
     if claude_signal == "UP" and "UPTREND" in trend_1m and "UPTREND" in trend_5m:
         reasons_to_trade.append("Both trends align UP")
     elif claude_signal == "DOWN" and "DOWNTREND" in trend_1m and "DOWNTREND" in trend_5m:
         reasons_to_trade.append("Both trends align DOWN")
     elif "SIDEWAYS" in trend_1m or "SIDEWAYS" in trend_5m or "UNKNOWN" in trend_1m:
         reasons_to_wait.append("Unclear trend")
-    
-    # Rule 6: Order book and trade flow (live data only)
+
+    # Rule 6: Order book and trade flow must confirm
     if market_data:
         ob = market_data.get("orderbook_imbalance_signal", "BALANCED")
         tf = market_data.get("trade_flow_signal", "NEUTRAL")
-        
+
         if claude_signal == "UP" and ob == "BUY_PRESSURE" and tf == "BUYING":
             reasons_to_trade.append("Order flow confirms UP")
         elif claude_signal == "DOWN" and ob == "SELL_PRESSURE" and tf == "SELLING":
             reasons_to_trade.append("Order flow confirms DOWN")
         elif (ob == "BUY_PRESSURE" and claude_signal == "DOWN") or (ob == "SELL_PRESSURE" and claude_signal == "UP"):
             reasons_to_wait.append("Order flow CONTRADICTS signal")
-    
-    # Decision: need 4+ reasons to trade AND more trade than wait reasons
+        else:
+            reasons_to_wait.append("Order flow neutral — no confirmation")
+
+    # Rule 7: ML model must confirm (NEW — stacked model)
+    if lgbm_signal and lgbm_signal != "SKIP":
+        if lgbm_signal == claude_signal and lgbm_conf >= 0.10:
+            reasons_to_trade.append(f"ML model confirms {lgbm_signal} ({lgbm_conf:.0%})")
+        elif lgbm_signal != claude_signal and lgbm_conf >= 0.10:
+            reasons_to_wait.append(f"ML model CONTRADICTS: {lgbm_signal} vs {claude_signal}")
+        else:
+            reasons_to_wait.append(f"ML model uncertain ({lgbm_conf:.0%})")
+
+    # Decision: need 5+ reasons to trade AND more trade than wait
+    # AND must have ZERO hard contradictions (order flow or ML opposing)
     trade_score = len(reasons_to_trade)
     wait_score = len(reasons_to_wait)
-    
-    should = trade_score >= 4 and trade_score > wait_score
-    
+
+    has_contradiction = any("CONTRADICTS" in r for r in reasons_to_wait)
+
+    should = trade_score >= 5 and trade_score > wait_score and not has_contradiction
+
     if should:
         adjusted = min(0.95, (score_confidence + claude_confidence) / 2 + 0.05 * trade_score)
     else:
         adjusted = min(0.5, (score_confidence + claude_confidence) / 2 - 0.05 * wait_score)
-    
+
     reason = f"TRADE ({trade_score} for, {wait_score} against)" if should else f"WAIT ({wait_score} against, {trade_score} for)"
     detail = " | ".join(reasons_to_trade + reasons_to_wait)
-    
+
     return should, f"{reason}: {detail}", round(adjusted, 3)
 
 
