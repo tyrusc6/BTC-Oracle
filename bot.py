@@ -139,13 +139,20 @@ JSON only: {{"signal": "UP" or "DOWN", "confidence": 0.0 to 1.0, "reasoning": "b
 
     try:
         response = claude.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=500,
             messages=[{"role": "user", "content": prompt}]
         )
         text = response.content[0].text.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+        if "```" in text:
+            text = text.split("```")[1]
+            if text.startswith("json"):
+                text = text[4:]
+        # Extract just the JSON object if there's extra text
+        start = text.find("{")
+        end = text.rfind("}") + 1
+        if start != -1 and end > start:
+            text = text[start:end]
         return json.loads(text)
     except Exception as e:
         print(f"Error calling Claude: {e}")
