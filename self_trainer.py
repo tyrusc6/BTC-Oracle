@@ -74,7 +74,7 @@ In 1 sentence: Why did this {'win' if signal['outcome'] == 'WIN' else 'lose'}? W
 JSON: {{"entry_type": "TRADE_REVIEW", "content": "your analysis"}}"""
 
     try:
-        resp = claude.messages.create(model="claude-sonnet-4-20250514", max_tokens=150, messages=[{"role": "user", "content": prompt}])
+        resp = claude.messages.create(model="claude-sonnet-4-6", max_tokens=150, messages=[{"role": "user", "content": prompt}])
         text = resp.content[0].text.strip()
         if text.startswith("```"):
             text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
@@ -181,7 +181,7 @@ Keep under 300 chars.
 JSON: {{"entry_type": "STRATEGY", "content": "your bullets"}}"""
 
     try:
-        resp = claude.messages.create(model="claude-sonnet-4-20250514", max_tokens=400, messages=[{"role": "user", "content": prompt}])
+        resp = claude.messages.create(model="claude-sonnet-4-6", max_tokens=400, messages=[{"role": "user", "content": prompt}])
         text = resp.content[0].text.strip()
         if text.startswith("```"):
             text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
