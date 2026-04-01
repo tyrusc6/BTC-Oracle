@@ -84,7 +84,19 @@ def should_trade(score, score_confidence, claude_signal, claude_confidence,
             reasons_to_wait.append("Order flow CONTRADICTS signal")
         # else: neutral order flow — no vote either way
 
-    # Rule 7: ML model must confirm (NEW — stacked model)
+    # Rule 7: Funding rate confirmation
+    if market_data:
+        funding_signal = market_data.get("funding_signal")
+        if funding_signal in ("EXTREME_LONG",) and claude_signal == "DOWN":
+            reasons_to_trade.append("Funding extreme long — supports DOWN")
+        elif funding_signal in ("EXTREME_SHORT",) and claude_signal == "UP":
+            reasons_to_trade.append("Funding extreme short — supports UP")
+        elif funding_signal in ("EXTREME_LONG",) and claude_signal == "UP":
+            reasons_to_wait.append("Funding extreme long CONTRADICTS UP signal")
+        elif funding_signal in ("EXTREME_SHORT",) and claude_signal == "DOWN":
+            reasons_to_wait.append("Funding extreme short CONTRADICTS DOWN signal")
+
+    # Rule 8: ML model must confirm (stacked model)
     if lgbm_signal and lgbm_signal != "SKIP":
         if lgbm_signal == claude_signal and lgbm_conf >= 0.10:
             reasons_to_trade.append(f"ML model confirms {lgbm_signal} ({lgbm_conf:.0%})")

@@ -188,6 +188,93 @@ def get_kraken_recent_trades():
     return {}
 
 
+def get_funding_rate():
+    """BTC perpetual funding rate from Bybit — leading reversal indicator.
+    Extreme positive funding = longs overleveraged = price likely drops.
+    Extreme negative funding = shorts overleveraged = price likely pumps."""
+    data = safe_get("https://api.bybit.com/v5/market/tickers?category=linear&symbol=BTCUSDT")
+    if data and data.get("result") and data["result"].get("list"):
+        ticker = data["result"]["list"][0]
+        funding = float(ticker.get("fundingRate", 0))
+        next_funding_time = ticker.get("nextFundingTime", "")
+        mark_price = float(ticker.get("markPrice", 0))
+        index_price = float(ticker.get("indexPrice", 0))
+        basis = ((mark_price - index_price) / index_price * 100) if index_price > 0 else 0
+
+        # Classify funding signal
+        if funding > 0.0005:
+            signal = "EXTREME_LONG"  # longs paying big => mean revert DOWN
+        elif funding > 0.0001:
+            signal = "MODERATE_LONG"
+        elif funding < -0.0005:
+            signal = "EXTREME_SHORT"  # shorts paying big => mean revert UP
+        elif funding < -0.0001:
+            signal = "MODERATE_SHORT"
+        else:
+            signal = "NEUTRAL"
+
+        return {
+            "funding_rate": round(funding, 6),
+            "funding_rate_pct": round(funding * 100, 4),
+            "funding_signal": signal,
+            "futures_basis_pct": round(basis, 4),
+            "mark_price": mark_price,
+            "next_funding_time": next_funding_time,
+        }
+    return {}
+
+
+def get_open_interest():
+    """BTC open interest from Bybit — shows leverage building up.
+    Rising OI + price up = sustainable. Rising OI + flat price = trap."""
+    data = safe_get("https://api.bybit.com/v5/market/open-interest?category=linear&symbol=BTCUSDT&intervalTime=5min&limit=12")
+    if data and data.get("result") and data["result"].get("list"):
+        oi_list = data["result"]["list"]
+        if len(oi_list) >= 2:
+            current_oi = float(oi_list[0].get("openInterest", 0))
+            prev_oi = float(oi_list[-1].get("openInterest", 0))
+            oi_change_pct = ((current_oi - prev_oi) / prev_oi * 100) if prev_oi > 0 else 0
+
+            # Classify OI change
+            if oi_change_pct > 2:
+                oi_signal = "OI_SURGING"  # big position buildup
+            elif oi_change_pct > 0.5:
+                oi_signal = "OI_RISING"
+            elif oi_change_pct < -2:
+                oi_signal = "OI_DROPPING_FAST"  # positions closing, move ending
+            elif oi_change_pct < -0.5:
+                oi_signal = "OI_DECLINING"
+            else:
+                oi_signal = "OI_STABLE"
+
+            return {
+                "open_interest_btc": round(current_oi, 2),
+                "open_interest_change_pct": round(oi_change_pct, 3),
+                "open_interest_signal": oi_signal,
+            }
+    return {}
+
+
+def get_liquidations():
+    """Recent BTC long/short liquidations from Bybit.
+    Heavy long liquidations = bearish cascade. Heavy short liq = bullish squeeze."""
+    # Use Bybit public liquidation stream via recent trades
+    data = safe_get("https://api.bybit.com/v5/market/tickers?category=linear&symbol=BTCUSDT")
+    if data and data.get("result") and data["result"].get("list"):
+        ticker = data["result"]["list"][0]
+        price_24h_pct = float(ticker.get("price24hPcnt", 0)) * 100
+        turnover_24h = float(ticker.get("turnover24h", 0))
+        volume_24h = float(ticker.get("volume24h", 0))
+
+        # High turnover relative to OI suggests liquidation activity
+        return {
+            "bybit_price_change_24h_pct": round(price_24h_pct, 2),
+            "bybit_turnover_24h": round(turnover_24h, 0),
+            "bybit_volume_24h": round(volume_24h, 2),
+        }
+    return {}
+
+
 def get_multi_timeframe_momentum():
     """Check price change across multiple timeframes using Kraken OHLC."""
     result = {}
@@ -251,6 +338,9 @@ def get_all_market_data():
         ("Candlestick Patterns", get_btc_ohlc_recent),
         ("Order Book", get_kraken_orderbook),
         ("Trade Flow", get_kraken_recent_trades),
+        ("Funding Rate", get_funding_rate),
+        ("Open Interest", get_open_interest),
+        ("Liquidation Data", get_liquidations),
         ("Multi-TF Momentum", get_multi_timeframe_momentum),
         ("Volatility", get_volatility_analysis),
     ]

@@ -83,7 +83,7 @@ def batch_insert(table, rows):
 
 
 def select(table, params=""):
-    """Select rows."""
+    """Select rows. NOTE: Supabase default limit is 1000 rows."""
     url = f"{SUPABASE_URL}/rest/v1/{table}?{params}"
     resp = _request("GET", url)
     if resp and resp.status_code == 200:
@@ -94,6 +94,36 @@ def select(table, params=""):
     elif resp:
         print(f"Select error ({table}): {resp.status_code} - {resp.text[:200]}")
     return []
+
+
+def count(table, params=""):
+    """Count rows matching params without downloading all data.
+    Uses Supabase exact count via HEAD + Prefer header."""
+    url = f"{SUPABASE_URL}/rest/v1/{table}?{params}&select=id"
+    count_headers = {**HEADERS, "Prefer": "count=exact", "Range-Unit": "items", "Range": "0-0"}
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            resp = requests.get(url, headers=count_headers, timeout=TIMEOUT)
+            if resp.status_code in (200, 206):
+                content_range = resp.headers.get("Content-Range", "")
+                # Format: "0-0/1234" or "*/1234"
+                if "/" in content_range:
+                    total = content_range.split("/")[-1]
+                    if total != "*":
+                        return int(total)
+            return 0
+        except:
+            if attempt < MAX_RETRIES:
+                time.sleep(1)
+                continue
+    return 0
+
+
+def count_where(table, outcome=None):
+    """Count wins/losses/total efficiently."""
+    if outcome:
+        return count(table, f"outcome=eq.{outcome}")
+    return count(table, "outcome=not.is.null")
 
 
 def update(table, match_column, match_value, data):

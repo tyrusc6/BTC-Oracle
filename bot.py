@@ -213,50 +213,56 @@ def check_previous_signals():
 
 
 def update_performance():
-    data = db.select("signals", "outcome=not.is.null&select=outcome")
-    if not data:
+    # Use count API to break through the 1000-row Supabase limit
+    total = db.count_where("signals")
+    wins = db.count_where("signals", "WIN")
+    losses = db.count_where("signals", "LOSS")
+
+    if total == 0:
         return
-    outcomes = [r["outcome"] for r in data]
-    total = len(outcomes)
-    wins = outcomes.count("WIN")
-    losses = outcomes.count("LOSS")
+
     win_rate = wins / total if total > 0 else 0
+
+    # Streak only needs last ~50 signals
+    recent = db.select("signals", "outcome=not.is.null&order=created_at.desc&limit=50&select=outcome")
     streak = 0
-    for o in reversed(outcomes):
-        if streak == 0:
-            streak = 1 if o == "WIN" else -1
-        elif (streak > 0 and o == "WIN") or (streak < 0 and o == "LOSS"):
-            streak += 1 if streak > 0 else -1
-        else:
-            break
+    if recent:
+        for o_row in recent:
+            o = o_row["outcome"]
+            if streak == 0:
+                streak = 1 if o == "WIN" else -1
+            elif (streak > 0 and o == "WIN") or (streak < 0 and o == "LOSS"):
+                streak += 1 if streak > 0 else -1
+            else:
+                break
+
     db.insert("performance", {"total_signals": total, "total_wins": wins, "total_losses": losses, "win_rate": win_rate, "streak_current": streak})
     print(f"  Overall: {win_rate:.1%} ({wins}W/{losses}L) | Streak: {streak}")
 
-    # V4 performance - only count TRADE signals (not WAIT)
-    v4_data = db.select("signals", "outcome=not.is.null&analysis_notes=like.*TRADE*&select=outcome,analysis_notes")
-    if v4_data:
-        trades = [s for s in v4_data if s.get("analysis_notes", "").startswith("[TRADE]")]
-        waits = [s for s in v4_data if s.get("analysis_notes", "").startswith("[WAIT]")]
-        trade_wins = len([s for s in trades if s["outcome"] == "WIN"])
-        trade_losses = len([s for s in trades if s["outcome"] == "LOSS"])
-        trade_total = trade_wins + trade_losses
+    # V4 performance - use counts for TRADE signals
+    trade_wins = db.count("signals", "outcome=eq.WIN&analysis_notes=like.%5BTRADE%5D*")
+    trade_losses = db.count("signals", "outcome=eq.LOSS&analysis_notes=like.%5BTRADE%5D*")
+    trade_total = trade_wins + trade_losses
+
+    wait_total = db.count("signals", "outcome=not.is.null&analysis_notes=like.%5BWAIT%5D*")
+
+    if trade_total > 0 or wait_total > 0:
         trade_wr = trade_wins / trade_total if trade_total > 0 else 0
-        all_v4 = trades + waits
-        all_v4_wins = len([s for s in all_v4 if s["outcome"] == "WIN"])
-        all_v4_total = len(all_v4)
+        all_v4_total = trade_total + wait_total
+        all_v4_wins = trade_wins + db.count("signals", "outcome=eq.WIN&analysis_notes=like.%5BWAIT%5D*")
         overall_v4_wr = all_v4_wins / all_v4_total if all_v4_total > 0 else 0
 
         db.insert("performance_v4", {
             "total_signals": all_v4_total,
             "total_trades": trade_total,
-            "total_waits": len(waits),
+            "total_waits": wait_total,
             "trade_wins": trade_wins,
             "trade_losses": trade_losses,
             "trade_win_rate": trade_wr,
             "overall_win_rate": overall_v4_wr,
             "streak_current": streak
         })
-        print(f"  V4 TRADE: {trade_wr:.1%} ({trade_wins}W/{trade_losses}L) out of {trade_total} trades | {len(waits)} waited")
+        print(f"  V4 TRADE: {trade_wr:.1%} ({trade_wins}W/{trade_losses}L) out of {trade_total} trades | {wait_total} waited")
 
 
 def run_signal_cycle():

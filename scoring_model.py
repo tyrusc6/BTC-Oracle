@@ -32,6 +32,10 @@ DEFAULT_TIER_WEIGHTS = {
     "vwap_revert": 0.8,
     "obv_divergence": 1.5,
     "lgbm_orderflow": 3.0,  # Tier 7: ML model trained on tick-level order flow
+    "funding_extreme": 3.0,  # Tier 8: Funding rate mean reversion
+    "funding_moderate": 1.5,
+    "oi_surge": 2.0,  # Tier 9: Open interest change
+    "oi_divergence": 2.5,  # OI rising but price flat = trap
 }
 
 
@@ -248,6 +252,42 @@ def score_signal(indicators, market_data=None, lgbm_dir=None, lgbm_conf=0.0):
         direction = +1 if lgbm_dir == "UP" else -1
         # Scale weight by confidence: full weight at conf >= 0.10
         votes.append((direction, weights["lgbm_orderflow"]))
+
+    # ============================================
+    # TIER 8: FUNDING RATE (mean reversion)
+    # ============================================
+    if market_data:
+        funding_signal = market_data.get("funding_signal")
+        if funding_signal == "EXTREME_LONG":
+            # Longs overleveraged, expect price to drop
+            votes.append((-1, weights["funding_extreme"]))
+        elif funding_signal == "EXTREME_SHORT":
+            # Shorts overleveraged, expect short squeeze UP
+            votes.append((+1, weights["funding_extreme"]))
+        elif funding_signal == "MODERATE_LONG":
+            votes.append((-1, weights["funding_moderate"]))
+        elif funding_signal == "MODERATE_SHORT":
+            votes.append((+1, weights["funding_moderate"]))
+
+    # ============================================
+    # TIER 9: OPEN INTEREST DIVERGENCE
+    # ============================================
+    if market_data:
+        oi_signal = market_data.get("open_interest_signal")
+        oi_change = market_data.get("open_interest_change_pct", 0)
+
+        if oi_signal == "OI_SURGING":
+            # Big position buildup — confirms current trend direction
+            if score > 0:
+                votes.append((+1, weights["oi_surge"]))
+            else:
+                votes.append((-1, weights["oi_surge"]))
+        elif oi_signal == "OI_DROPPING_FAST":
+            # Positions closing — current move is exhausting, fade it
+            if score > 0:
+                votes.append((-1, weights["oi_divergence"]))
+            else:
+                votes.append((+1, weights["oi_divergence"]))
 
     # ============================================
     # CALCULATE
